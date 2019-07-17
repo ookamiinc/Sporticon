@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="mw8 center">
+    <section class="w-100">
+        {{ content }}
+    </section>
+    {% include google-analytics.html %}
+  </body>
+</html>
