@@ -1,0 +1,15 @@
+@import url(tachyons.css);
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://content.playerapp.tokyo/fonts/Kinto-Sans/kinto-sans.css");
+html { font-family: 'Inter', 'Kinto Sans', system-ui, -apple-system, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Segoe UI', 'Meiryo', sans-serif; }
+
+* { color: #000; }
+
+body { background-color: #fff; }
+
+.hero-button { background-color: #ff395f; }
+
+.hero-link { color: #ff395f; text-decoration: none; border-bottom: 2px solid #ffd2db; }
+
+.caption { color: rgba(0, 0, 0, 0.64); }
+.caption a { color: inherit; text-decoration: none; border-bottom: 2px solid rgba(191, 191, 191, 0.64); }
