@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  deploy:
+    docker:
+      - image: circleci/ruby:2.4.3-node-browsers
+    steps:
+      - checkout
+      - run: cd docs/
+      - run: bundle install
+      - run: bundle exec jekyll build
+      - run: cd ..
+      - deploy:
+          name: Deploy Release to GitHub
+          command: |
+            if [ $CIRCLE_BRANCH == 'master' ]; then
+              bash .circleci/deploy-gh-pages.sh
+            fi
+workflows:
+  version: 2
+  build:
+    jobs:
+      - deploy
+view raw
