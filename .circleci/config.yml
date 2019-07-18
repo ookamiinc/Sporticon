@@ -20,4 +20,3 @@ workflows:
   build:
     jobs:
       - deploy
-view raw
