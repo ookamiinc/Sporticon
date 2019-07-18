@@ -2,14 +2,11 @@ version: 2
 jobs:
   deploy:
     docker:
-      - image: circleci/ruby:2.4.3-node-browsers
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          BUNDLER_VERSION: 2.0.2
     steps:
       - checkout
-      - run:
-          name: install dependencies
-          command: |
-            gem update --system
-            gem install bundler
       - run: cd docs/ && bundle install
       - run: cd docs/ && bundle exec jekyll build
       - deploy:
