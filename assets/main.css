@@ -7,6 +7,10 @@ html { font-family: 'Inter', 'Kinto Sans', system-ui, -apple-system, 'Helvetica 
 
 body { background-color: #fff; }
 
+nav { flex-direction: row; }
+@media only screen and (max-width: 400px) { nav { flex-direction: column; height: 178px; align-items: left; justify-content: left; }
+  nav span { display: none; } }
+
 .hero-button { background-color: #ff395f; }
 
 .hero-link { color: #ff395f; text-decoration: none; border-bottom: 2px solid #ffd2db; }
