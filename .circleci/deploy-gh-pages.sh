@@ -4,8 +4,9 @@ git config user.email "$USER_EMAIL"
 git checkout gh-pages
 git pull origin gh-pages
 
-find . -maxdepth 1 ! -name 'docs' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name 'docs' ! -name 'CNAME' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 mv docs/_site/* .
+mv docs/CNAME .
 rm -R docs
 
 git add -fA
