@@ -8,7 +8,6 @@ markdown: kramdown
 livereload: true 
 
 # Localization
-# Localize
 defaults:
     -
      scope:
