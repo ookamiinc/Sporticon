@@ -1,15 +1,45 @@
 <footer>
-    {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
-    {% if pages.size == 0 %}
-        {% assign pages=site.pages| where:"lang-ref", page.lang-ref | sort: 'lang' %}
-    {% endif %}
-    {% if pages.size > 1 %}
-    <ul>
-    {% for page in pages %}
-    <li><a href="{{ site.base-url }}{{ page.url }}" class="langSwitch {{ page.lang }}" title="View in {{ site.data.languages[page.lang].label }}">{{ site.data.languages[page.lang].icon }} {{ site.data.languages[page.lang].label }}
-    </a></li>
-    {% endfor %}
-    </ul>
-{% endif %}
+    <div>
+        <section>
+            <h4>Sporticon</h4>
+            <ul>
+                {% for link in site.data.footer.sporticon %}
+                <li><a href="{{ link.url }}">{{ link.title[page.lang] }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section>
+            <h4>ookami</h4>
+            <ul>
+                {% for link in site.data.footer.ookami %}
+                <li><a href="{{ link.url }}">{{ link.title[page.lang] }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section>
+            <h4>Player!</h4>
+            <ul>
+                {% for link in site.data.footer.player %}
+                <li><a href="{{ link.url }}">{{ link.title[page.lang] }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+        {% if pages.size == 0 %}
+            {% assign pages=site.pages| where:"lang-ref", page.lang-ref | sort: 'lang' %}
+        {% endif %}
+        {% if pages.size > 1 %}
+        <section>
+            <h4>Language</h4>
+            <ul>
+                {% for page in pages %}
+                <li><a href="{{ site.base-url }}{{ page.url }}" class="langSwitch {{ page.lang }}" title="View in {{ site.data.languages[page.lang].label }}">{{ site.data.languages[page.lang].icon }} {{ site.data.languages[page.lang].label }}
+                </a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    </div>
+    <p class="sub-copy">Player! Spoticon is an open-source project maintained by the design team at <a target="_blank" href="https://ookami.tokyo/" class="dim">ookami</a> with @takeisme, @nancytru and @riomarmccartney. Supported by <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>.</p>
+    <p class="sub-copy">Copyright © 2019 ookami Inc.</p>
 </footer>
-{% endif %}
