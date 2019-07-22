@@ -8,6 +8,7 @@ lang-ref: index
 
 <article class="ph4 pv4 bb bw1 b--black-05">
     <p class="lh-copy f4">Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. <a target="_blank" href="https://www.pr-table.com/ookami/stories/23551" class="hero-link dim">Read the story (Japanese) →</a></p>
+    <p class="caption lh-copy f5">Supported by <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>: An all-in-one sports team management app for youth, recreational and competitive sports teams.</p>
 </article>
 <article class="ph4 pv4 bb bw1 b--black-05">
     <div class="mb4">
@@ -18,4 +19,7 @@ lang-ref: index
     <p class="lh-copy f4"><span class="fw6">Suggestions & contributions are welcome:</span> This is an open source project, meaning the original symbol files used to build Sporticon are freely available to improve upon. For more infomation, check out our <a target="_blank" href="#" class="hero-link dim">“contributing” documentation →</a></p>
     <p class="caption lh-copy f5">See source on our <a target="_blank" href="https://github.com/ookamiinc/sporticon" class="dim">GitHub repository</a>.</p>
     </div>
+</article>
+<article class="ph4 pv4 bb bw1 b--black-05">
+    <p class="caption lh-copy f5">Player! Spoticon is an open-source project by the design team at <a target="_blank" href="https://ookami.tokyo/" class="dim">ookami</a>, with the support of <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>: An all-in-one sports team management app for youth, recreational and competitive sports teams.</p>
 </article>

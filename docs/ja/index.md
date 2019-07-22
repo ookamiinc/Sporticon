@@ -8,6 +8,7 @@ lang-ref: index
 
 <article class="ph4 pv4 bb bw1 b--black-05">
     <p class="lh-copy f4">Player! Sporticon - スポティコンは130種類のスポーツに対応した、シンプルかつ熱狂に溢れたスポーツアイコンです。<a target="_blank" href="https://www.pr-table.com/ookami/stories/23551" class="hero-link dim">ストーリーを読む →</a></p>
+    <p class="caption lh-copy f5">Supported by <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>: スポーツチームの運営がもっと楽しくなるチーム管理ツール。</p>
 </article>
 <article class="ph4 pv4 bb bw1 b--black-05">
     <div class="mb4">
@@ -18,4 +19,7 @@ lang-ref: index
     <p class="lh-copy f4"><span class="fw6">デザイン修正の提案や、新しいスポティコンを募集しています: </span>このプロジェクトはオープンソースプロジェクトとなっています。是非皆様からのコミットをお待ちしております。詳しくは <a target="_blank" href="#" class="hero-link dim">Contributing (作成)</a> ガイドをご覧ください。</p>
     <p class="caption lh-copy f5">詳しいソースコードや開発については、<a target="_blank" href="https://github.com/ookamiinc/sporticon" class="dim">GitHub</a> で確認。</p>
     </div>
+</article>
+<article class="ph4 pv4 bb bw1 b--black-05">
+    <p class="caption lh-copy f5">Player! Spoticon は <a target="_blank" href="https://ookami.tokyo/" class="dim">ookami</a> のデザインチームによるオープンソースプロジェクトです。<br>Supported by <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>: スポーツチームの運営がもっと楽しくなるチーム管理ツール。</p>
 </article>
