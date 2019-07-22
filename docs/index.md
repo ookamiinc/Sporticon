@@ -1,3 +1,21 @@
 ---
-layout: home
+layout: base
+lang: en
+lang-ref: index
 ---
+
+{% include navMinimal.html %}
+
+<article class="ph4 pv4 bb bw1 b--black-05">
+    <p class="lh-copy f4">Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. <a target="_blank" href="https://www.pr-table.com/ookami/stories/23551" class="hero-link dim">Read the story (Japanese) →</a></p>
+</article>
+<article class="ph4 pv4 bb bw1 b--black-05">
+    <div class="mb4">
+    <p class="lh-copy f4"><span class="fw6">Our symbols are free for everyone to use:</span> Tap & save an icon from the list below or download our set to use them in your digital products, prints and marketing assets. </p>
+    <p class="caption lh-copy f5">Icons are not for sale, nor for re-selling purposes. Available under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0" class="dim">Apache 2.0 license</a>.</p>
+    </div>
+    <div>
+    <p class="lh-copy f4"><span class="fw6">Suggestions & contributions are welcome:</span> This is an open source project, meaning the original symbol files used to build Sporticon are freely available to improve upon. For more infomation, check out our <a target="_blank" href="#" class="hero-link dim">“contributing” documentation →</a></p>
+    <p class="caption lh-copy f5">See source on our <a target="_blank" href="https://github.com/ookamiinc/sporticon" class="dim">GitHub repository</a>.</p>
+    </div>
+</article>
