@@ -24,4 +24,18 @@
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
         {%- include google-analytics.html -%}
     {%- endif -%}
+    <script>
+        var [lang, locale] = ((navigator.userLanguage || navigator.language).toLowerCase()).split('-');
+        var pageLang = "{{page.lang}}";
+        var alternateJa = !!document.querySelector('link[hreflang="ja"]');
+        var langSet = localStorage["langSet"];
+
+        document.addEventListener("click", function(event) {
+            if (event.target.matches('.langSwitch')) localStorage["langSet"] = true; 
+        }); 
+
+        if (alternateJa && lang == "ja" && lang != pageLang && !langSet ){
+            window.location.replace(document.querySelector('link[hreflang="ja"]').href);
+        };
+    </script>
 </head>
