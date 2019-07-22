@@ -6,6 +6,15 @@
     {%- seo -%}
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     {%- feed_meta -%}
+    {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% if pages.size == 0 %}
+        {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% endif %}
+    {% if pages.size > 1 %}
+        {% for page in pages %}
+            <link rel="alternate" hreflang="{{page.lang}}" href="{{ site.base-url }}{{ page.url }}" />
+        {% endfor %}
+    {% endif %}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
         {%- include google-analytics.html -%}
     {%- endif -%}
