@@ -1,14 +1,5 @@
-title: Player! Sporticon
-email: design@ookamiinc.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Player! Sporticon is a simple, delightfully crafted set of symbols 
-  made to represent sports from a wide range of disciplines. 
-  Our symbols are free for everyone to use; in your digital products, 
-  prints and marketing assets. 
 baseurl: "" 
 url: "sporticon.ookami.tokyo"
-twitter_username: player_twi
-github_username:  ookami
 
 # Build settings
 markdown: kramdown
