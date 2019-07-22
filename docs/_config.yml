@@ -14,7 +14,6 @@ github_username:  ookami
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-polyglot
 
 # Server Config options
 livereload: true 
@@ -35,7 +34,3 @@ defaults:
          lang: ja
          base-url: "/ja/"
 
-# languages: ["en", "ja"]
-# default_lang: "en"
-# exclude_from_localization: ["javascript", "images", "css"]
-# parallel_localization: true
