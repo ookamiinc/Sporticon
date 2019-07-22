@@ -20,6 +20,20 @@ plugins:
 livereload: true 
 
 # Localization
+# Localize
+defaults:
+    -
+     scope:
+         path: ""
+     values:
+         lang: en
+         base-url: "/"
+    -
+     scope:
+         path: ja
+     values:
+         lang: ja
+         base-url: "/ja/"
 
 # languages: ["en", "ja"]
 # default_lang: "en"
