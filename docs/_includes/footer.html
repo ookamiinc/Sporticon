@@ -1,14 +1,15 @@
-{% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
-{% if pages.size == 0 %}
-    {% assign pages=site.pages| where:"lang-ref", page.lang-ref | sort: 'lang' %}
-{% endif %}
-{% if pages.size > 1 %}
 <footer>
+    {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% if pages.size == 0 %}
+        {% assign pages=site.pages| where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% endif %}
+    {% if pages.size > 1 %}
     <ul>
     {% for page in pages %}
     <li><a href="{{ site.base-url }}{{ page.url }}" class="langSwitch {{ page.lang }}" title="View in {{ site.data.languages[page.lang].label }}">{{ site.data.languages[page.lang].icon }} {{ site.data.languages[page.lang].label }}
     </a></li>
     {% endfor %}
     </ul>
+{% endif %}
 </footer>
 {% endif %}
