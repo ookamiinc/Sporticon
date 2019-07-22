@@ -3,8 +3,6 @@ url: "sporticon.ookami.tokyo"
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
 
 # Server Config options
 livereload: true 

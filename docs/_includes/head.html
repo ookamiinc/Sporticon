@@ -12,7 +12,6 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    {%- feed_meta -%}
     {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
     {% if pages.size == 0 %}
         {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
