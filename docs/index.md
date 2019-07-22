@@ -6,20 +6,22 @@ lang-ref: index
 
 {% include navMinimal.html %}
 
-<article class="ph4 pv4 bb bw1 b--black-05">
-    <p class="lh-copy f4">Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. <a target="_blank" href="https://www.pr-table.com/ookami/stories/23551" class="hero-link dim">Read the story (Japanese) →</a></p>
-    <p class="caption lh-copy f5">Supported by <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>: An all-in-one sports team management app for youth, recreational and competitive sports teams.</p>
+<article markdown="1">
+Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. [Read the story (Japanese) →](https://www.pr-table.com/ookami/stories/23551){: .link-primary}{:target="_blank"}
+
+{: .sub-copy}
+Supported by [TeamHub](https://tmhub.jp/){: .link-secondary}{:target="_blank"}: An all-in-one sports team management app for youth, recreational and competitive sports teams.
 </article>
-<article class="ph4 pv4 bb bw1 b--black-05">
-    <div class="mb4">
-    <p class="lh-copy f4"><span class="fw6">Our symbols are free for everyone to use:</span> Tap & save an icon from the list below or download our set to use them in your digital products, prints and marketing assets. </p>
-    <p class="caption lh-copy f5">Icons are not for sale, nor for re-selling purposes. Available under the <a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0" class="dim">Apache 2.0 license</a>.</p>
-    </div>
-    <div>
-    <p class="lh-copy f4"><span class="fw6">Suggestions & contributions are welcome:</span> This is an open source project, meaning the original symbol files used to build Sporticon are freely available to improve upon. For more infomation, check out our <a target="_blank" href="#" class="hero-link dim">“contributing” documentation →</a></p>
-    <p class="caption lh-copy f5">See source on our <a target="_blank" href="https://github.com/ookamiinc/sporticon" class="dim">GitHub repository</a>.</p>
-    </div>
-</article>
-<article class="ph4 pv4 bb bw1 b--black-05">
-    <p class="caption lh-copy f5">Player! Spoticon is an open-source project by the design team at <a target="_blank" href="https://ookami.tokyo/" class="dim">ookami</a>, with the support of <a target="_blank" href="https://tmhub.jp/" class="dim">TeamHub</a>: An all-in-one sports team management app for youth, recreational and competitive sports teams.</p>
+
+<article markdown="1">
+**Our symbols are free for everyone to use:** Tap & save an icon from the list below or download our set to use them in your digital products, prints and marketing assets.
+
+{: .sub-copy}
+Icons are not for sale, nor for re-selling purposes. Available under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} license.
+
+<br>
+**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available to improve upon. For more infomation, check out our [“contributing” documentation →](#){: .link-primary}
+
+{: .sub-copy}
+See source on our [GitHub](https://github.com/ookamiinc/sporticon).
 </article>

@@ -6,6 +6,11 @@
 @import "_typography.scss";
 @import "_wdl-color.scss";
 
+// Mixin
+@mixin divider {
+    border-color: $light-base-divider;
+}
+
 // Base
 * {
     color: $light-element-base-high-emphasis;
@@ -13,22 +18,50 @@
 body {
     background-color: $light-base-background;
 }
-
+article {
+    @include divider;
+    @extend .ph4;
+    @extend .pv4;
+    @extend .bb;
+    @extend .bw1;
+}
+footer {
+    @extend .ph4;
+    @extend .pv4;
+}
+a {
+    @extend .dim;
+    text-decoration: none; 
+}
+strong {
+    @extend .fw6;
+}
+p {
+    @extend .lh-copy;
+    @extend .f4;
+    &.sub-copy {
+        @extend .f5;
+        color: $light-element-base-medium-emphasis;
+        a {
+            border-bottom: 2px solid lighten($light-element-base-medium-emphasis, 75%); 
+        }
+    }
+    a {
+        color: inherit;
+        border-bottom: 2px solid lighten($light-element-base-high-emphasis, 15%); 
+        &.link-primary {
+            color: $primitive-primary; 
+            border-bottom: 2px solid lighten($primitive-primary, 30%); 
+        }
+        &.link-secondary {
+            color: $primitive-secondary; 
+            border-bottom: 2px solid lighten($primitive-secondary, 30%); 
+        }
+    }
+}
 //
 .hero-button {
     background-color: $primitive-primary;   
 }
-.hero-link {
-    color: $primitive-primary; 
-    text-decoration: none; 
-    border-bottom: 2px solid lighten($primitive-primary, 30%); 
-}
-.caption {
-    color: $light-element-base-medium-emphasis;
-    a {
-        color: inherit;
-        text-decoration: none; 
-        border-bottom: 2px solid lighten($light-element-base-medium-emphasis, 75%); 
-    }
-}
+
 
