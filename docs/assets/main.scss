@@ -18,8 +18,7 @@
 body {
     background-color: $light-base-background;
 }
-.hero-button {
-    background-color: $primitive-primary;   
+
 article {
     @include divider;
     @extend .ph4;
@@ -79,9 +78,6 @@ p {
         }
     }
 }
-//
 .hero-button {
-    background-color: $primitive-primary;   
-}
-
-
+    background-color: $primitive-primary; 
+}  
