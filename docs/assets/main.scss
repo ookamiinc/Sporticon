@@ -33,31 +33,55 @@ body {
 }
 article {
     @include divider;
-    @extend .ph4;
+    @extend .ph3;
+    @extend .ph4-m;
     @extend .pv4;
     @extend .bb;
     @extend .bw1;
 }
+nav {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .flex-row-m;
+    @extend .justify-between-m;
+    @extend .justify-start;
+    @extend .items-start;
+    @extend .items-center-m;
+    @extend .ph3;
+    @extend .ph4-m;
+    @extend .pt5;
+    @extend .pb1;
+    @extend .pb2-m;
+}
 footer {
-    @extend .ph4;
+    @extend .ph3;
+    @extend .ph4-m;
     @extend .pv4;
     @extend .f5;
     @extend .lh-copy;
     div {
         @extend .flex;
         @extend .flex-wrap;
+        @extend .flex-nowrap-m;
         @extend .justify-between;
         h4 {
             @extend .fw6;
         }
         section {
             @extend .flex-auto;
-            @extend .w-25;
+            @extend .w-50;
+            @extend .w-25-m;
         }
     }
     ul {
         @extend .list;
         @extend .pl0;
+        @extend .mt0;
+        @extend .mb4;
+    }
+    h4 {
+        @extend .mt0;
+        @extend .mb1;
     }
 }
 a {
@@ -98,6 +122,9 @@ p {
             border-bottom: 2px solid lighten($primitive-secondary, 30%); 
         }
     }
+}
+.ja p {
+    @extend .tj;
 }
 .hero-button {
     background-color: $primitive-primary; 
