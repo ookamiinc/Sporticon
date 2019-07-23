@@ -111,6 +111,7 @@ p {
         }
     }
     a {
+        word-break: keep-all;
         color: inherit;
         border-bottom: 2px solid lighten($light-element-base-high-emphasis, 15%); 
         &.link-primary {
@@ -125,7 +126,7 @@ p {
 }
 .ja article  {
     @extend .tj;
-    word-wrap: break;
+    word-wrap: break-word;
     
 }
 .hero-button {
