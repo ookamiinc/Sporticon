@@ -19,6 +19,18 @@ body {
     background-color: $light-base-background;
 }
 
+.highEmpahsis {
+    color: $light-element-base-high-emphasis;
+    fill: $light-element-base-high-emphasis; 
+}
+.mediumEmpahsis {
+    color: $light-element-base-medium-emphasis;
+    fill: $light-element-base-medium-emphasis;
+}
+.lowEmphasis {
+    color: $light-element-base-low-emphasis;
+    fill: $light-element-base-low-emphasis;
+}
 article {
     @include divider;
     @extend .ph4;
@@ -63,6 +75,15 @@ p {
         color: $light-element-base-medium-emphasis;
         a {
             border-bottom: 2px solid lighten($light-element-base-medium-emphasis, 75%); 
+        }
+        &.lowEmphasis{
+            @extend .lowEmphasis;
+        }
+        &.mediumEmphasis{
+            @extend .mediumEmpahsis;
+        }
+        &.highEmphasis{
+            @extend .highEmpahsis;
         }
     }
     a {
