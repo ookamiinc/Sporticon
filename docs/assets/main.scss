@@ -42,14 +42,14 @@ article {
 }
 nav {
     @extend .flex;
+    @extend .flex-row-ns;
     @extend .flex-row-m;
-    @extend .flex-row-l;
-    @extend .flex-column-ns;
-    @extend .justify-between-m;
-    @extend .justify-between-l;
-    @extend .justify-start-ns;
+    @extend .flex-column;
+    @extend .justify-between;
+    @extend .justify-start;
     @extend .items-start;
     @extend .items-center-m;
+    @extend .items-center-l;
     @extend .ph3;
     @extend .ph4-m;
     @extend .ph4-l;
