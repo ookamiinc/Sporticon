@@ -38,6 +38,20 @@ article {
     @extend .bb;
     @extend .bw1;
 }
+nav {
+    @extend .flex;
+    @extend .flex-column;
+    @extend .flex-row-m;
+    @extend .justify-between-m;
+    @extend .justify-start;
+    @extend .items-start;
+    @extend .items-center-m;
+    @extend .ph3;
+    @extend .ph4-m;
+    @extend .pt5;
+    @extend .pb1;
+    @extend .pb2-m;
+}
 footer {
     @extend .ph4;
     @extend .pv4;
