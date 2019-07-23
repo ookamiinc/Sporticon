@@ -3,13 +3,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.data.translations['projectTitle'][page.lang] }}</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@player_twi" />
+    <meta name="twitter:creator" content="@ookamiinc" />
+    <meta property="og:locale" content="{{page.lang}}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <meta property="og:title" content="{{ site.data.translations['projectTitle'][page.lang] }}">
     <meta property="og:site_name" content="{{ site.data.translations['projectTitle'][page.lang] }}">
     <meta name="description" content="{{ site.data.translations['projectDescription'][page.lang] }}">
     <meta property="og:description" content="{{ site.data.translations['projectDescription'][page.lang] }}">
     <meta property="og:image" content="https://repository-images.githubusercontent.com/195603394/b38acb80-a8dc-11e9-837f-b96f2ad9145c">
-    <meta property="og:locale" content="{{page.lang}}" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
