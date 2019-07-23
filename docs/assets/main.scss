@@ -117,6 +117,13 @@ p {
             @extend .highEmpahsis;
         }
     }
+    &.caption-copy {
+        @extend .f6;
+        color: $light-element-base-low-emphasis;
+        a {
+            border-bottom: 1px solid $light-base-divider; 
+        }
+    }
     a {
         word-break: keep-all;
 
