@@ -8,7 +8,8 @@ lang-ref: index
 
 <article markdown="1">
 
-Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. [Read the story (Japanese) →](https://www.pr-table.com/ookami/stories/23551){: .link-primary}{:target="_blank"}
+Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. 
+<br> [Read the story (Japanese) →](https://www.pr-table.com/ookami/stories/23551){: .link-primary}{:target="_blank"}
 
 {: .sub-copy}
 Supported by [TeamHub](https://tmhub.jp/){: .link-secondary}{:target="_blank"}: An all-in-one sports team management app for youth, recreational and competitive sports teams.
