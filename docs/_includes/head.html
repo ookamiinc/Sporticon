@@ -2,11 +2,40 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    {%- seo -%}
+    <title>{{ site.data.translations['projectTitle'][page.lang] }}</title>
+    <meta property="og:title" content="{{ site.data.translations['projectTitle'][page.lang] }}">
+    <meta property="og:site_name" content="{{ site.data.translations['projectTitle'][page.lang] }}">
+    <meta name="description" content="{{ site.data.translations['projectDescription'][page.lang] }}">
+    <meta property="og:description" content="{{ site.data.translations['projectDescription'][page.lang] }}">
+    <meta property="og:image" content="https://repository-images.githubusercontent.com/195603394/b38acb80-a8dc-11e9-837f-b96f2ad9145c">
+    <meta property="og:locale" content="{{page.lang}}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    {%- feed_meta -%}
+    {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% if pages.size == 0 %}
+        {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
+    {% endif %}
+    {% if pages.size > 1 %}
+        {% for page in pages %}
+            <link rel="alternate" hreflang="{{page.lang}}" href="{{ site.base-url }}{{ page.url }}" />
+        {% endfor %}
+    {% endif %}
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
         {%- include google-analytics.html -%}
     {%- endif -%}
+    <script>
+        var [lang, locale] = ((navigator.userLanguage || navigator.language).toLowerCase()).split('-');
+        var pageLang = "{{page.lang}}";
+        var alternateJa = !!document.querySelector('link[hreflang="ja"]');
+        var langSet = localStorage["langSet"];
+
+        document.addEventListener("click", function(event) {
+            if (event.target.matches('.langSwitch')) localStorage["langSet"] = true; 
+        }); 
+
+        if (alternateJa && lang == "ja" && lang != pageLang && !langSet ){
+            window.location.replace(document.querySelector('link[hreflang="ja"]').href);
+        };
+    </script>
 </head>

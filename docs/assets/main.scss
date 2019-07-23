@@ -2,9 +2,14 @@
 ---
 
 // Import Tachyons
-@import "tachyons.css";
+@import "tachyons.scss";
 @import "_typography.scss";
 @import "_wdl-color.scss";
+
+// Mixin
+@mixin divider {
+    border-color: $light-base-divider;
+}
 
 // Base
 * {
@@ -14,21 +19,131 @@ body {
     background-color: $light-base-background;
 }
 
-//
-.hero-button {
-    background-color: $primitive-primary;   
+.highEmpahsis {
+    color: $light-element-base-high-emphasis;
+    fill: $light-element-base-high-emphasis; 
 }
-.hero-link {
-    color: $primitive-primary; 
-    text-decoration: none; 
-    border-bottom: 2px solid lighten($primitive-primary, 30%); 
-}
-.caption {
+.mediumEmpahsis {
     color: $light-element-base-medium-emphasis;
-    a {
-        color: inherit;
-        text-decoration: none; 
-        border-bottom: 2px solid lighten($light-element-base-medium-emphasis, 75%); 
+    fill: $light-element-base-medium-emphasis;
+}
+.lowEmphasis {
+    color: $light-element-base-low-emphasis;
+    fill: $light-element-base-low-emphasis;
+}
+article {
+    @include divider;
+    @extend .ph3;
+    @extend .ph4-m;
+    @extend .ph4-l;
+    @extend .pv4;
+    @extend .bb;
+    @extend .bw1;
+}
+nav {
+    @extend .flex;
+    @extend .flex-row-m;
+    @extend .flex-row-l;
+    @extend .flex-column-ns;
+    @extend .justify-between-m;
+    @extend .justify-between-l;
+    @extend .justify-start-ns;
+    @extend .items-start;
+    @extend .items-center-m;
+    @extend .ph3;
+    @extend .ph4-m;
+    @extend .ph4-l;
+    @extend .pt5;
+    @extend .pb1;
+    @extend .pb2-m;
+    @extend .pb2-l;
+}
+footer {
+    @extend .ph3;
+    @extend .ph4-m;
+    @extend .ph4-l;
+    @extend .pv4;
+    @extend .f5;
+    @extend .lh-copy;
+    div {
+        @extend .flex;
+        @extend .flex-wrap;
+        @extend .flex-nowrap-m;
+        @extend .justify-between;
+        h4 {
+            @extend .fw6;
+        }
+        section {
+            @extend .flex-auto;
+            @extend .w-50;
+            @extend .w-25-m;
+            @extend .w-25-l;
+        }
+    }
+    ul {
+        @extend .list;
+        @extend .pl0;
+        @extend .mt0;
+        @extend .mb4;
+    }
+    h4 {
+        @extend .mt0;
+        @extend .mb1;
     }
 }
+a {
+    @extend .dim;
+    text-decoration: none; 
+}
+strong {
+    @extend .fw6;
+}
+p {
+    @extend .lh-copy;
+    @extend .f4;
+    &.sub-copy {
+        @extend .f5;
+        color: $light-element-base-medium-emphasis;
+        a {
+            border-bottom: 2px solid lighten($light-element-base-medium-emphasis, 75%); 
+        }
+        &.lowEmphasis{
+            @extend .lowEmphasis;
+        }
+        &.mediumEmphasis{
+            @extend .mediumEmpahsis;
+        }
+        &.highEmphasis{
+            @extend .highEmpahsis;
+        }
+    }
+    &.caption-copy {
+        @extend .f6;
+        color: $light-element-base-low-emphasis;
+        a {
+            border-bottom: 1px solid $light-base-divider; 
+        }
+    }
+    a {
+        word-break: keep-all;
 
+        color: inherit;
+        border-bottom: 2px solid lighten($light-element-base-high-emphasis, 15%); 
+        &.link-primary {
+            color: $primitive-primary; 
+            border-bottom: 2px solid lighten($primitive-primary, 30%); 
+        }
+        &.link-secondary {
+            color: $primitive-secondary; 
+            border-bottom: 2px solid lighten($primitive-secondary, 30%); 
+        }
+    }
+}
+.ja article  {
+    @extend .tj;
+    word-wrap: break-word;
+    
+}
+.hero-button {
+    background-color: $primitive-primary; 
+}  
