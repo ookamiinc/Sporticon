@@ -113,6 +113,9 @@ p {
         }
     }
 }
+.ja p {
+    @extend .tj;
+}
 .hero-button {
     background-color: $primitive-primary; 
 }  
