@@ -37,11 +37,11 @@ ookami:
 player:
   - title:
       en: "iPhone app"
-      ja: "アプリへ"
+      ja: "アプリ版"
     url: "https://apps.apple.com/jp/app/id897872395"
   - title:
       en: "Web app"
-      ja: "ウェブへ"
+      ja: "ウェブ版"
     url: "https://web.playerapp.tokyo"
   - title: 
       en: "Twitter"
