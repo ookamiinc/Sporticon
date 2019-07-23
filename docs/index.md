@@ -24,7 +24,7 @@ Icons are not for sale, nor for re-selling purposes. Available under the [Apache
 
 <br>
 
-**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available to improve upon. For more infomation, check out our [“contributing” documentation →](#){: .link-primary}
+**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available to improve upon. For more infomation, check out our [“contributing” documentation →](https://github.com/ookamiinc/Sporticon/master/Contributing.md){: .link-primary} (Coming soon).
 
 {: .sub-copy}
 See source on our [GitHub](https://github.com/ookamiinc/sporticon).

@@ -24,7 +24,7 @@ Supported by [TeamHub](https://tmhub.jp/){: .link-secondary}{:target="_blank"}: 
 
 <br>
 
-**デザイン修正の提案や、新しいスポティコンを募集しています:** このプロジェクトはオープンソースプロジェクトとなっています。是非皆様からのコミットをお待ちしております。詳しくは [Contributing (作成)](#){: .link-primary} ガイドをご覧ください。
+**デザイン修正の提案や、新しいスポティコンを募集しています:** このプロジェクトはオープンソースプロジェクトとなっています。是非皆様からのコミットをお待ちしております。詳しくは [Contributing (作成)](https://github.com/ookamiinc/Sporticon/master/Contributing.md){: .link-primary} ガイドをご覧ください (Coming soon)。
 
 {: .sub-copy}
 詳しいソースコードや開発については、[GitHub](https://github.com/ookamiinc/sporticon) で確認。
