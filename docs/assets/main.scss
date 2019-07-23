@@ -35,27 +35,33 @@ article {
     @include divider;
     @extend .ph3;
     @extend .ph4-m;
+    @extend .ph4-l;
     @extend .pv4;
     @extend .bb;
     @extend .bw1;
 }
 nav {
     @extend .flex;
-    @extend .flex-column;
     @extend .flex-row-m;
+    @extend .flex-row-l;
+    @extend .flex-column-ns;
     @extend .justify-between-m;
-    @extend .justify-start;
+    @extend .justify-between-l;
+    @extend .justify-start-ns;
     @extend .items-start;
     @extend .items-center-m;
     @extend .ph3;
     @extend .ph4-m;
+    @extend .ph4-l;
     @extend .pt5;
     @extend .pb1;
     @extend .pb2-m;
+    @extend .pb2-l;
 }
 footer {
     @extend .ph3;
     @extend .ph4-m;
+    @extend .ph4-l;
     @extend .pv4;
     @extend .f5;
     @extend .lh-copy;
@@ -71,6 +77,7 @@ footer {
             @extend .flex-auto;
             @extend .w-50;
             @extend .w-25-m;
+            @extend .w-25-l;
         }
     }
     ul {
@@ -112,6 +119,7 @@ p {
     }
     a {
         word-break: keep-all;
+
         color: inherit;
         border-bottom: 2px solid lighten($light-element-base-high-emphasis, 15%); 
         &.link-primary {
