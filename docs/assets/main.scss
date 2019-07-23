@@ -18,6 +18,19 @@
 body {
     background-color: $light-base-background;
 }
+
+.highEmpahsis {
+    color: $light-element-base-high-emphasis;
+    fill: $light-element-base-high-emphasis; 
+}
+.mediumEmpahsis {
+    color: $light-element-base-medium-emphasis;
+    fill: $light-element-base-medium-emphasis;
+}
+.lowEmphasis {
+    color: $light-element-base-low-emphasis;
+    fill: $light-element-base-low-emphasis;
+}
 article {
     @include divider;
     @extend .ph4;
@@ -28,6 +41,24 @@ article {
 footer {
     @extend .ph4;
     @extend .pv4;
+    @extend .f5;
+    @extend .lh-copy;
+    div {
+        @extend .flex;
+        @extend .flex-wrap;
+        @extend .justify-between;
+        h4 {
+            @extend .fw6;
+        }
+        section {
+            @extend .flex-auto;
+            @extend .w-25;
+        }
+    }
+    ul {
+        @extend .list;
+        @extend .pl0;
+    }
 }
 a {
     @extend .dim;
@@ -45,6 +76,15 @@ p {
         a {
             border-bottom: 2px solid lighten($light-element-base-medium-emphasis, 75%); 
         }
+        &.lowEmphasis{
+            @extend .lowEmphasis;
+        }
+        &.mediumEmphasis{
+            @extend .mediumEmpahsis;
+        }
+        &.highEmphasis{
+            @extend .highEmpahsis;
+        }
     }
     a {
         color: inherit;
@@ -59,9 +99,6 @@ p {
         }
     }
 }
-//
 .hero-button {
-    background-color: $primitive-primary;   
-}
-
-
+    background-color: $primitive-primary; 
+}  

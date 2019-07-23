@@ -1,0 +1,53 @@
+sporticon:
+  - title:
+      en: "GitHub"
+      ja: "GitHub"
+    url: "https://github.com/ookamiinc/sporticon"
+  - title:
+      en: "Contribute"
+      ja: "Contributing"
+    url: "https://github.com/ookamiinc/sporticon/contribute.md"
+  - title:
+      en: "Send feedback"
+      ja: "意見を送る"
+    url: "mailto:design@ookamiinc.com"
+  - title:
+      en: "License"
+      ja: "ライセンス"
+    url: "https://www.apache.org/licenses/LICENSE-2.0"
+  
+ookami:
+  - title:
+      en: "Company"
+      ja: "会社"
+    url: "https://ookami.tokyo/company"
+  - title:
+      en: "Jobs"
+      ja: "Wantedly"
+    url: "https://en-jp.wantedly.com/companies/ookami"
+  - title:
+      en: "Twitter"
+      ja: "ツイッター"
+    url: "https://twitter.com/ookamiinc"
+  - title:
+      en: "Contact us"
+      ja: "お問い合わせ"
+    url: "mailto:info@ookamimail.com"
+    
+player:
+  - title:
+      en: "iPhone app"
+      ja: "アプリへ"
+    url: "https://apps.apple.com/jp/app/id897872395"
+  - title:
+      en: "Web app"
+      ja: "ウェブへ"
+    url: "https://web.playerapp.tokyo"
+  - title: 
+      en: "Twitter"
+      ja: "ツイッター"
+    url: "https://twitter.com/player_twi"
+  - title: 
+      en: "Media Partner"
+      ja: "速報する"
+    url: "https://ookami.tokyo/media-partner/"
