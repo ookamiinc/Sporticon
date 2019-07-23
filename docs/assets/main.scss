@@ -123,8 +123,10 @@ p {
         }
     }
 }
-.ja p {
+.ja article  {
     @extend .tj;
+    word-wrap: break;
+    
 }
 .hero-button {
     background-color: $primitive-primary; 
