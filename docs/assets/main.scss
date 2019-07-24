@@ -146,4 +146,67 @@ p {
 }
 .hero-button {
     background-color: $primitive-primary; 
-}  
+}  .iconTable {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    @media screen and (max-width: 30em) { 
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .eachIcon {
+        @extend .pa2;
+        @extend .fl;
+        transition: 300ms width;
+        @media screen and (max-width: 40em) { 
+            width: calc(100% / 4); 
+        }
+        @media screen and (min-width: 40em) and (max-width: 50em) { 
+            width: calc(100% / 6); 
+        }
+        @media screen and (min-width: 50em) and (max-width: 60em) { 
+            width: calc(100% / 7); 
+        }
+        @media screen and (min-width: 60em) { 
+            width: calc(100% / 8);
+        }
+        a, .iconObject {
+            @extend .db;
+            @extend .tc;
+            @extend .flex;
+            @extend .br2;
+            @extend .pa2;
+            transition: 300ms background;
+            background: rgba($primitive-primary, 0);
+            .wrap {
+                @extend .ph2;
+                @extend .pb2;
+                @extend .ph2-ns;
+                @extend .pb2-ns;
+                @extend .ph3-m;
+                @extend .pb3-m;
+                @extend .ph3-l;
+                @extend .pb3-l;
+                
+                i {
+                    @extend .db;
+                    @extend .f1;
+                    @extend .contain;
+                    @extend .aspect-ratio--object;
+                    width: 100%;
+                    background: no-repeat center;
+                }
+            }
+            &:hover, &:active {
+               opacity: 1;
+               background: rgba($primitive-primary, 0.1);
+            }
+        }
+        .label {
+                @extend .f7;
+                @extend .lh-title;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+        }
+    }
+}

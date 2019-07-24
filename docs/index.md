@@ -31,3 +31,20 @@ Icons are not for sale, nor for re-selling purposes. Available under the [Apache
 See source on our [GitHub](https://github.com/ookamiinc/sporticon).
 
 </article>
+
+<article class="iconTable">
+    <div class="cf">
+        {% for icon in site.data.icons %}
+        <div class="eachIcon {{ icon.first }}">
+            <a class="iconObject">
+                <div class="wrap">
+                    <div class="aspect-ratio aspect-ratio--1x1">
+                        <i class=" {{ icon.first }}" style="background-image: url('https://raw.githubusercontent.com/ookamiinc/Sporticon/master/package/svg/{{ icon.first }}.svg?sanitize=true');"></i>
+                    </div>
+                </div>
+                 <div class="label">{{ icon.first }}</div>
+            </a>
+        </div>
+        {% endfor%}
+    </div>
+</article>
