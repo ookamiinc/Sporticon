@@ -26,12 +26,12 @@
     "sport_info": "https://en.wikipedia.org/wiki/American_Football"
   },
   {
-    "id": "american_handball",
+    "id": "wall_handball",
     "Unicode": "f103",
     "player_id": "",
     "name_en": "American Handball",
     "name_ja": "ウォールハンドボール",
-    "name_aka_en": "Wall-Handball",
+    "name_aka_en": "American Handball",
     "sport_related": "",
     "sport_type": "Court, Wall",
     "sport_disabled": "FALSE",
@@ -234,10 +234,10 @@
     "sport_info": "https://en.wikipedia.org/wiki/Biribol"
   },
   {
-    "id": "boat_racing",
+    "id": "boat_race",
     "Unicode": "f113",
     "player_id": 33,
-    "name_en": "Boat Racing",
+    "name_en": "Boat Race",
     "name_ja": "競艇",
     "name_aka_en": "",
     "sport_related": "Racing",
@@ -351,10 +351,10 @@
     "sport_info": "https://en.wikipedia.org/wiki/Climbing"
   },
   {
-    "id": "combat_sports",
+    "id": "combat",
     "Unicode": "f11c",
     "player_id": 29,
-    "name_en": "Combat Sports",
+    "name_en": "Combat Sport",
     "name_ja": "格闘技",
     "name_aka_en": "",
     "sport_related": "Martial Arts",
@@ -702,7 +702,7 @@
     "sport_info": "https://en.wikipedia.org/wiki/Hardcourt_Bike_Polo"
   },
   {
-    "id": "hockey, field_hockey",
+    "id": "hockey",
     "Unicode": "f137",
     "player_id": 14,
     "name_en": "Hockey",
@@ -832,7 +832,7 @@
     "sport_info": "https://en.wikipedia.org/wiki/Kendo"
   },
   {
-    "id": "kin-ball",
+    "id": "kin_ball",
     "Unicode": "f141",
     "player_id": "",
     "name_en": "Kin-Ball",
@@ -936,10 +936,10 @@
     "sport_info": "https://en.wikipedia.org/wiki/Mother's_Volleyball"
   },
   {
-    "id": "motorsport",
+    "id": "motorsports",
     "Unicode": "f149",
     "player_id": 32,
-    "name_en": "Motorsport",
+    "name_en": "Motorsports",
     "name_ja": "モータースポーツ",
     "name_aka_en": "",
     "sport_related": "Racing",
@@ -988,7 +988,7 @@
     "sport_info": "https://en.wikipedia.org/wiki/Padel_(sport)"
   },
   {
-    "id": "paleta_frontón",
+    "id": "paleta_fronton",
     "Unicode": "f14d",
     "player_id": "",
     "name_en": "Paleta Frontón",
@@ -1118,7 +1118,7 @@
     "sport_info": "https://en.wikipedia.org/wiki/Racquetball"
   },
   {
-    "id": "radball, cycle_ball",
+    "id": "radball",
     "Unicode": "f157",
     "player_id": "",
     "name_en": "Radball",
@@ -1287,12 +1287,12 @@
     "sport_info": "https://en.wikipedia.org/wiki/Snow_volleyball"
   },
   {
-    "id": "soccer, football",
+    "id": "soccer",
     "Unicode": "f164",
     "player_id": 1,
     "name_en": "Soccer, Football",
     "name_ja": "サッカー",
-    "name_aka_en": "",
+    "name_aka_en": "Football",
     "sport_related": "Soccer",
     "sport_type": "Pitch",
     "sport_disabled": "FALSE",
