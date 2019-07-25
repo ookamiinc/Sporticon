@@ -15,6 +15,7 @@
 // Base
 * {
     color: $light-element-base-high-emphasis;
+    -webkit-font-smoothing: antialiased;
 }
 body {
     background-color: $light-base-background;
@@ -145,8 +146,24 @@ p {
     word-wrap: break-word;
     
 }
-.hero-button {
+.link {
+    @extend .flex;
+    @extend .justify-center;
+    @extend .items-center;
+    @extend .tc;
+    cursor: pointer;
+    div {
+        @extend .flex-auto;
+    }
+}
+.hero-primary {
     background-color: $primitive-primary; 
+}
+.hero-secondary {
+    background-color: $primitive-secondary; 
+}
+.hero-dismiss {
+    background-color: $light-base-surface; 
 }
 .iconTable {
     padding-left: 1.5rem;
@@ -188,15 +205,6 @@ p {
                 @extend .pb3-m;
                 @extend .ph3-l;
                 @extend .pb3-l;
-                
-                i {
-                    @extend .db;
-                    @extend .f1;
-                    @extend .contain;
-                    @extend .aspect-ratio--object;
-                    width: 100%;
-                    background: no-repeat center;
-                }
             }
             &:hover, &:active {
                opacity: 1;
@@ -211,4 +219,12 @@ p {
                 text-overflow: ellipsis;
         }
     }
+}
+i {
+    @extend .db;
+    @extend .f1;
+    @extend .contain;
+    @extend .aspect-ratio--object;
+    width: 100%;
+    background: no-repeat center;
 }
