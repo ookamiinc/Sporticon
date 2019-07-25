@@ -4,8 +4,6 @@ lang: en
 lang-ref: index
 ---
 
-{% include navMinimal.html %}
-
 <article markdown="1">
 
 Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. 
@@ -30,21 +28,4 @@ Icons are not for sale, nor for re-selling purposes. Available under the [Apache
 {: .sub-copy}
 See source on our [GitHub](https://github.com/ookamiinc/sporticon).
 
-</article>
-
-<article class="iconTable">
-    <div class="cf">
-        {% for icon in site.data.icons %}
-        <div class="eachIcon {{ icon.first }}">
-            <a class="iconObject">
-                <div class="wrap">
-                    <div class="aspect-ratio aspect-ratio--1x1">
-                        <i class=" {{ icon.first }}" style="background-image: url('https://raw.githubusercontent.com/ookamiinc/Sporticon/master/package/svg/{{ icon.first }}.svg?sanitize=true');"></i>
-                    </div>
-                </div>
-                 <div class="label">{{ icon.first }}</div>
-            </a>
-        </div>
-        {% endfor%}
-    </div>
 </article>

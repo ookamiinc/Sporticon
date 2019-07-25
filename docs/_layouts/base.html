@@ -5,9 +5,12 @@
 
   <body class="mw8 center {{ page.lang }}" >
     <section class="w-100">
+        {% include navMinimal.html %}
         {{ content }}
+        {% include iconGrid.html %}
     </section>
     {% include google-analytics.html %}
     {% include footer.html %}
+    {% include iconPreviewModal.html %}
   </body>
 </html>
