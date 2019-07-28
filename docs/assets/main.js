@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         disableScroll: false, // [5]
         disableFocus: true, // [6]
         awaitCloseAnimation: true, // [7]
-        debugMode: true // [8]
+        debugMode: false // [8]
     });
 
     // Get icon data
