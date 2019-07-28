@@ -1,8 +1,50 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://content.playerapp.tokyo/fonts/Kinto-Sans/kinto-sans.css");
+.modal .modalOverlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); display: flex; justify-content: center; align-items: center; z-index: 9999; }
+@media screen and (max-width: 30em) { .modal .modalOverlay { align-items: flex-end; transition: 200ms; } }
+.modal .modalHeader h3 { flex: 1; }
+@media screen and (max-width: 30em) { .modal .modalHeader { display: none; } }
+.modal .modalContainer { max-width: 400px; }
+@media screen and (max-width: 30em) { .modal .modalContainer { width: calc(100% - 16px); margin-bottom: calc( env(safe-area-inset-bottom) + 12px); } }
+.modal .iconDescription { flex: 1; }
+.modal .modalCloseButton { background-color: transparent; outline: none; border: none; cursor: pointer; }
+.modal .modalAction .link { margin-bottom: 16px; height: 48px; }
+
+/**************************\ Demo Animation Style
+\**************************/
+@keyframes mmfadeIn { from { opacity: 0; }
+  to { opacity: 1; } }
+@keyframes mmfadeOut { from { opacity: 1; }
+  to { opacity: 0; } }
+@keyframes mmscaleIn { from { transform: scale(0.85); }
+  to { transform: scale(1); } }
+@keyframes mmscaleOut { from { transform: scale(1); }
+  to { transform: scale(0.85); } }
+@keyframes mmslideIn { from { transform: translateY(100%); }
+  to { transform: translateY(0); } }
+@keyframes mmslideOut { from { transform: translateY(0); }
+  to { transform: translateY(100%); } }
+.modalAnimation { display: none; }
+
+.modalAnimation.is-open { display: block; }
+
+.modalAnimation[aria-hidden="false"] .modalOverlay { animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1); }
+
+.modalAnimation[aria-hidden="false"] .modalContainer { animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1); }
+
+@media screen and (min-width: 30em) { .modalAnimation[aria-hidden="false"] .modalContainer { animation: mmscaleIn 0.3s cubic-bezier(0, 0, 0.2, 1); } }
+
+.modalAnimation[aria-hidden="true"] .modalOverlay { animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1); }
+
+.modalAnimation[aria-hidden="true"] .modalContainer { animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1); }
+
+@media screen and (min-width: 30em) { .modalAnimation[aria-hidden="true"] .modalContainer { animation: mmscaleOut 0.3s cubic-bezier(0, 0, 0.2, 1); } }
+
+.modalAnimation .modalContainer, .modalAnimation .modalOverlay { will-change: transform; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document ========================================================================== */
 /** 1. Correct the line height in all browsers. 2. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS. */
-@import url("https://rsms.me/inter/inter.css");
-@import url("https://content.playerapp.tokyo/fonts/Kinto-Sans/kinto-sans.css");
 html { line-height: 1.15; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
 
 /* Sections ========================================================================== */
@@ -200,7 +242,7 @@ html, body, div, article, section, main, footer, header, form, fieldset, legend,
 
 .aspect-ratio--1x1 { padding-bottom: 100%; }
 
-.aspect-ratio--object { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
+.aspect-ratio--object, i { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
 
 @media screen and (min-width: 30em) { .aspect-ratio-ns { height: 0; position: relative; }
   .aspect-ratio--16x9-ns { padding-bottom: 56.25%; }
@@ -257,7 +299,7 @@ img { max-width: 100%; }
 */
 .cover { background-size: cover !important; }
 
-.contain { background-size: contain !important; }
+.contain, i { background-size: contain !important; }
 
 @media screen and (min-width: 30em) { .cover-ns { background-size: cover !important; }
   .contain-ns { background-size: contain !important; } }
@@ -497,7 +539,7 @@ img { max-width: 100%; }
 
 .br1 { border-radius: 0.125rem; }
 
-.br2 { border-radius: 0.25rem; }
+.br2, .iconTable .eachIcon a, .iconTable .eachIcon .iconObject { border-radius: 0.25rem; }
 
 .br3 { border-radius: 0.5rem; }
 
@@ -817,12 +859,12 @@ img { max-width: 100%; }
  Media Query Extensions: -ns = not-small -m  = medium -l  = large
 
 */
-.flex, nav, footer div { display: flex; }
+.flex, nav, footer div, .link, .iconTable .eachIcon a, .iconTable .eachIcon .iconObject { display: flex; }
 
 .inline-flex { display: inline-flex; }
 
 /* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
-.flex-auto, footer div section { flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
+.flex-auto, footer div section, .link div { flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
 
 .flex-none { flex: none; }
 
@@ -844,7 +886,7 @@ img { max-width: 100%; }
 
 .items-end { align-items: flex-end; }
 
-.items-center { align-items: center; }
+.items-center, .link { align-items: center; }
 
 .items-baseline { align-items: baseline; }
 
@@ -864,7 +906,7 @@ img { max-width: 100%; }
 
 .justify-end { justify-content: flex-end; }
 
-.justify-center { justify-content: center; }
+.justify-center, .link { justify-content: center; }
 
 .justify-between, nav, footer div { justify-content: space-between; }
 
@@ -1059,7 +1101,7 @@ img { max-width: 100%; }
 
 .di { display: inline; }
 
-.db { display: block; }
+.db, .iconTable .eachIcon a, .iconTable .eachIcon .iconObject, i { display: block; }
 
 .dib { display: inline-block; }
 
@@ -1126,7 +1168,7 @@ img { max-width: 100%; }
  Media Query Extensions: -ns = not-small -m  = medium -l  = large
 
 */
-.fl { float: left; _display: inline; }
+.fl, .iconTable .eachIcon { float: left; _display: inline; }
 
 .fr { float: right; _display: inline; }
 
@@ -1388,7 +1430,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 */
 .lh-solid { line-height: 1; }
 
-.lh-title { line-height: 1.25; }
+.lh-title, .iconTable .eachIcon .label { line-height: 1.25; }
 
 .lh-copy, footer, p { line-height: 1.5; }
 
@@ -2239,7 +2281,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 .pa1 { padding: 0.25rem; }
 
-.pa2 { padding: 0.5rem; }
+.pa2, .iconTable .eachIcon, .iconTable .eachIcon a, .iconTable .eachIcon .iconObject { padding: 0.5rem; }
 
 .pa3 { padding: 1rem; }
 
@@ -2287,7 +2329,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 .pb1, nav { padding-bottom: 0.25rem; }
 
-.pb2 { padding-bottom: 0.5rem; }
+.pb2, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-bottom: 0.5rem; }
 
 .pb3 { padding-bottom: 1rem; }
 
@@ -2335,7 +2377,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 .ph1 { padding-left: 0.25rem; padding-right: 0.25rem; }
 
-.ph2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.ph2, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-left: 0.5rem; padding-right: 0.5rem; }
 
 .ph3, article, nav, footer { padding-left: 1rem; padding-right: 1rem; }
 
@@ -2485,7 +2527,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
   .pr7-ns { padding-right: 16rem; }
   .pb0-ns { padding-bottom: 0; }
   .pb1-ns { padding-bottom: 0.25rem; }
-  .pb2-ns { padding-bottom: 0.5rem; }
+  .pb2-ns, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-bottom: 0.5rem; }
   .pb3-ns { padding-bottom: 1rem; }
   .pb4-ns { padding-bottom: 2rem; }
   .pb5-ns { padding-bottom: 4rem; }
@@ -2509,7 +2551,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
   .pv7-ns { padding-top: 16rem; padding-bottom: 16rem; }
   .ph0-ns { padding-left: 0; padding-right: 0; }
   .ph1-ns { padding-left: 0.25rem; padding-right: 0.25rem; }
-  .ph2-ns { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .ph2-ns, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-left: 0.5rem; padding-right: 0.5rem; }
   .ph3-ns { padding-left: 1rem; padding-right: 1rem; }
   .ph4-ns { padding-left: 2rem; padding-right: 2rem; }
   .ph5-ns { padding-left: 4rem; padding-right: 4rem; }
@@ -2598,7 +2640,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
   .pb0-m { padding-bottom: 0; }
   .pb1-m { padding-bottom: 0.25rem; }
   .pb2-m, nav { padding-bottom: 0.5rem; }
-  .pb3-m { padding-bottom: 1rem; }
+  .pb3-m, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-bottom: 1rem; }
   .pb4-m { padding-bottom: 2rem; }
   .pb5-m { padding-bottom: 4rem; }
   .pb6-m { padding-bottom: 8rem; }
@@ -2622,7 +2664,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
   .ph0-m { padding-left: 0; padding-right: 0; }
   .ph1-m { padding-left: 0.25rem; padding-right: 0.25rem; }
   .ph2-m { padding-left: 0.5rem; padding-right: 0.5rem; }
-  .ph3-m { padding-left: 1rem; padding-right: 1rem; }
+  .ph3-m, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-left: 1rem; padding-right: 1rem; }
   .ph4-m, article, nav, footer { padding-left: 2rem; padding-right: 2rem; }
   .ph5-m { padding-left: 4rem; padding-right: 4rem; }
   .ph6-m { padding-left: 8rem; padding-right: 8rem; }
@@ -2710,7 +2752,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
   .pb0-l { padding-bottom: 0; }
   .pb1-l { padding-bottom: 0.25rem; }
   .pb2-l, nav { padding-bottom: 0.5rem; }
-  .pb3-l { padding-bottom: 1rem; }
+  .pb3-l, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-bottom: 1rem; }
   .pb4-l { padding-bottom: 2rem; }
   .pb5-l { padding-bottom: 4rem; }
   .pb6-l { padding-bottom: 8rem; }
@@ -2734,7 +2776,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
   .ph0-l { padding-left: 0; padding-right: 0; }
   .ph1-l { padding-left: 0.25rem; padding-right: 0.25rem; }
   .ph2-l { padding-left: 0.5rem; padding-right: 0.5rem; }
-  .ph3-l { padding-left: 1rem; padding-right: 1rem; }
+  .ph3-l, .iconTable .eachIcon a .wrap, .iconTable .eachIcon .iconObject .wrap { padding-left: 1rem; padding-right: 1rem; }
   .ph4-l, article, nav, footer { padding-left: 2rem; padding-right: 2rem; }
   .ph5-l { padding-left: 4rem; padding-right: 4rem; }
   .ph6-l { padding-left: 8rem; padding-right: 8rem; }
@@ -3027,7 +3069,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 .tr { text-align: right; }
 
-.tc { text-align: center; }
+.tc, .link, .iconTable .eachIcon a, .iconTable .eachIcon .iconObject { text-align: center; }
 
 .tj, .ja article { text-align: justify; }
 
@@ -3082,7 +3124,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .f-5, .f-subheadline { font-size: 5rem; }
 
 /* Type Scale */
-.f1 { font-size: 3rem; }
+.f1, i { font-size: 3rem; }
 
 .f2 { font-size: 2.25rem; }
 
@@ -3094,7 +3136,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 .f6, p.caption-copy { font-size: 0.875rem; }
 
-.f7 { font-size: 0.75rem; }
+.f7, .iconTable .eachIcon .label { font-size: 0.75rem; }
 
 @media screen and (min-width: 30em) { .f-6-ns, .f-headline-ns { font-size: 6rem; }
   .f-5-ns, .f-subheadline-ns { font-size: 5rem; }
@@ -3366,7 +3408,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 */
 html { font-family: 'Inter', 'Kinto Sans', system-ui, -apple-system, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Segoe UI', 'Meiryo', sans-serif; }
 
-* { color: #000; }
+* { color: #000; -webkit-font-smoothing: antialiased; }
 
 body { background-color: #fff; }
 
@@ -3390,4 +3432,23 @@ p a.link-secondary { color: #ff881f; border-bottom: 2px solid #ffd9b8; }
 
 .ja article { word-wrap: break-word; }
 
-.hero-button { background-color: #ff395f; }
+.link { cursor: pointer; }
+
+.hero-primary { background-color: #ff395f; }
+
+.hero-secondary { background-color: #ff881f; }
+
+.hero-dismiss { background-color: #f7f7f7; }
+
+.iconTable { padding-left: 1.5rem; padding-right: 1.5rem; }
+@media screen and (max-width: 30em) { .iconTable { padding-left: 0.5rem; padding-right: 0.5rem; } }
+.iconTable .eachIcon { transition: 300ms width; }
+@media screen and (max-width: 40em) { .iconTable .eachIcon { width: calc(100% / 4); } }
+@media screen and (min-width: 40em) and (max-width: 50em) { .iconTable .eachIcon { width: calc(100% / 6); } }
+@media screen and (min-width: 50em) and (max-width: 60em) { .iconTable .eachIcon { width: calc(100% / 7); } }
+@media screen and (min-width: 60em) { .iconTable .eachIcon { width: calc(100% / 8); } }
+.iconTable .eachIcon a, .iconTable .eachIcon .iconObject { transition: 300ms background; background: rgba(255, 57, 95, 0); }
+.iconTable .eachIcon a:hover, .iconTable .eachIcon a:active, .iconTable .eachIcon .iconObject:hover, .iconTable .eachIcon .iconObject:active { opacity: 1; background: rgba(255, 57, 95, 0.1); }
+.iconTable .eachIcon .label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+i { width: 100%; background: no-repeat center; }
