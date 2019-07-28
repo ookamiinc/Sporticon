@@ -16,6 +16,9 @@
     }
   }
   .modalHeader {
+    h3 {
+      flex: 1;
+    }
     @media screen and (max-width: 30em) { 
       display: none;
     }
@@ -27,14 +30,14 @@
       margin-bottom: calc( env(safe-area-inset-bottom) + 12px);
     }
   }
+  .iconDescription {
+    flex: 1;
+  }
   .modalCloseButton {
     background-color: transparent;
     outline: none;
     border: none;
     cursor: pointer;
-  }
-  .iconWrap {
-    width: 80px;
   }
   .modalAction .link {
     margin-bottom: 16px;
