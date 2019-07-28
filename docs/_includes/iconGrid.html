@@ -1,0 +1,23 @@
+<article class="iconTable">
+    <div class="cf">
+        {% for icon in site.data.sporticon_definitions %}
+        <div class="eachIcon" title="{{ icon.id }}" data-sportName="{{ icon.id }}" 
+            data-name="{% if page.lang != 'ja' %}{{ icon.name_en }}{% else %}{{ icon.name_ja }}{% endif %}"
+            data-description="{% if icon.sport_symbol != '' %}Symbol: {{icon.sport_symbol}}.{% endif %}{% if icon.name_aka_en != '' %}<br>Also knowns as {{icon.name_aka_en}}.{% endif %}{% if icon.sport_info != '' %}<br><a class='dib mt1' href='{{icon.sport_info}}'>{{ site.data.translations['modalAbout'][page.lang] }} ↗</a>{% endif %}"
+            data-png="https://github.com/ookamiinc/Sporticon/raw/master/sources/png%40w1024/{{ icon.id }}.png"
+            data-svg="https://github.com/ookamiinc/Sporticon/raw/master/sources/svg/{{ icon.id }}.svg"
+            >
+            <a class="iconObject" data-micromodal-trigger="iconPreviewModal">
+                <div class="wrap">
+                    <div class="aspect-ratio aspect-ratio--1x1">
+                        <i style='background-image: url("https://raw.githubusercontent.com/ookamiinc/Sporticon/master/sources/svg/{{ icon.id }}.svg?sanitize=true");'></i>
+                    </div>
+                </div>
+                <div class="label">
+                    {% if page.lang != 'ja' %}{{ icon.name_en }}{% else %}{{ icon.name_ja }}{% endif %}
+                </div>
+            </a>
+        </div>
+        {% endfor%}
+    </div>
+</article>
