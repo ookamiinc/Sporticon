@@ -50,5 +50,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
         document.getElementById('modalSVGDownload').setAttribute("href", selectedGlyph.dataset.svg);
         document.getElementById('modalPNGDownload').setAttribute("href", selectedGlyph.dataset.png);
+
+        // Arrow control events
+        document.onkeydown = function(event) {
+            switch (event.keyCode) {
+               case 37:
+                    if (selectedGlyph.previousElementSibling != null) {
+                        switchGlyph(selectedGlyph.previousElementSibling);
+                        return;
+                    } else {
+                        break;
+                    };
+               case 39:
+                    if (selectedGlyph.nextElementSibling != null) {
+                        switchGlyph(selectedGlyph.nextElementSibling);
+                        return;
+                    } else {
+                        break;
+                    };
+            };
+        };
     }
 });
