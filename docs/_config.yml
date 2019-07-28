@@ -1,6 +1,8 @@
 baseurl: "" 
 url: "sporticon.ookami.tokyo"
 
+theme: false
+
 # Build settings
 markdown: kramdown
 
