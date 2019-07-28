@@ -36,4 +36,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
         debugMode: true // [8]
     });
 
+    // Get icon data
+
+    var eachGlyph = document.getElementsByClassName('eachIcon');
+    for (var i = 0; i < eachGlyph.length; i++) {
+        eachGlyph[i].addEventListener("click", function (event){
+        switchGlyph(event.currentTarget);
+      });
+    };
+    function switchGlyph(selectedGlyph){
+        document.getElementById('modalGlyph').style.backgroundImage = "url(" + selectedGlyph.dataset.svg + "?sanitize=true)";
+        document.getElementById('modalTitle').innerHTML = selectedGlyph.dataset.name;
+        document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
+        document.getElementById('modalSVGDownload').setAttribute("href", selectedGlyph.dataset.svg);
+        document.getElementById('modalPNGDownload').setAttribute("href", selectedGlyph.dataset.png);
+    }
 });
