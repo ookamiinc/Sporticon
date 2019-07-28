@@ -24,13 +24,13 @@ if(!0!==o.debugMode||!1!==c(i,a))for(var s in a){var l=a[s]
 o.targetModal=s,o.triggers=[].concat(t(l)),new n(o)}},show:function(e,o){var t=o||{}
 t.targetModal=e,!0===t.debugMode&&!1===s(e)||(a=new n(t),a.showModal())},close:function(e){e?a.closeModalById(e):a.closeModal()}}}()})
 
-// Modal setup
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    // Modal setup
     MicroModal.init({
         openTrigger: 'data-micromodal-trigger', // [3]
         closeTrigger: 'data-micromodal-close', // [4]
-        disableScroll: true, // [5]
+        disableScroll: false, // [5]
         disableFocus: true, // [6]
         awaitCloseAnimation: true, // [7]
         debugMode: true // [8]
