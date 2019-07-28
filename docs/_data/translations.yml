@@ -2,6 +2,18 @@ downloadSet:
   en: "Download Set ↓"
   ja: "全てダウンロード ↓"
 
+downloadIcon:
+  en: "Download Icon"
+  ja: "アイコンをダウンロード"
+
+modalClose:
+  en: "Close"
+  ja: "閉じる"
+
+modalAbout:
+  en: "About"
+  ja: "Info"
+
 # SEO Tags
 
 projectTitle:

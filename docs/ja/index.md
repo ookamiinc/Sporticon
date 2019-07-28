@@ -4,8 +4,6 @@ lang: ja
 lang-ref: index
 ---
 
-{% include navMinimal.html %}
-
 <article markdown="1">
 
 Player! Sporticon - スポティコンは130種類のスポーツに対応した、シンプルかつ熱狂に溢れたスポーツアイコンです。[ストーリーを読む →](https://www.pr-table.com/ookami/stories/23551){: .link-primary}{:target="_blank"}

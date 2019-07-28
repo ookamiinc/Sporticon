@@ -4,8 +4,6 @@ lang: en
 lang-ref: index
 ---
 
-{% include navMinimal.html %}
-
 <article markdown="1">
 
 Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines. 

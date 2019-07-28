@@ -15,6 +15,7 @@
     <meta property="og:image" content="https://repository-images.githubusercontent.com/195603394/b38acb80-a8dc-11e9-837f-b96f2ad9145c">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}"/>
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+    <script src="{{ "/assets/main.js" | relative_url }}"></script>
     {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
     {% if pages.size == 0 %}
         {% assign pages=site.pages | where:"lang-ref", page.lang-ref | sort: 'lang' %}
