@@ -1,7 +1,7 @@
 <article class="iconTable">
     <div class="cf">
         {% for icon in site.data.sporticon_definitions %}
-        <div class="eachIcon" title="{{ icon.id }}" data-sportName="{{ icon.id }}" 
+        <div class="eachIcon" title="{{ icon.id }}" data-id="{{ icon.id }}" 
             data-name="{% if page.lang != 'ja' %}{{ icon.name_en }}{% else %}{{ icon.name_ja }}{% endif %}"
             data-description="{% if icon.sport_symbol != '' %}Symbol: {{icon.sport_symbol}}.{% endif %}{% if icon.name_aka_en != '' %}<br>Also knowns as {{icon.name_aka_en}}.{% endif %}{% if icon.sport_info != '' %}<br><a class='dib mt1' href='{{icon.sport_info}}'>{{ site.data.translations['modalAbout'][page.lang] }} ↗</a>{% endif %}"
             data-png="https://github.com/ookamiinc/Sporticon/raw/master/sources/png%40w1024/{{ icon.id }}.png"
