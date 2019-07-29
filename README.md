@@ -4,9 +4,9 @@ Player! Sporticon is a simple, delightfully crafted set of symbols made to repre
 
 ***
 
-**Our symbols are free for everyone to use:** Visit our [website](https://sporticon.ookami.tokyo/) to view and save icons individually from the list or [download](https://github.com/ookamiinc/Sporticon/releases/download/1.0a/Sporticon.zip) our set to use them in your digital products, prints and marketing assets. Available under the Apache 2.0 license, the only thing we ask is that you not re-sell these icons themselves. We'd love attribution in your project's about section, but it is not required. 
+**Our symbols are free for everyone to use:** Visit our [website](https://sporticon.ookami.tokyo/) to view and save icons individually from the list or [download](https://github.com/ookamiinc/Sporticon/releases/download/1.0a/Sporticon.zip) our set to use them in your digital products, prints and marketing assets. Available under the [Apache 2.0](LICENSE) license, the only thing we ask is that you not re-sell these icons themselves. We'd love attribution in your project's about section, but it is not required. 
 
-**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available for remix, re-share and even improve upon. For more information about contributing to Sporticon, check out our contributing.md documentation (WIP).
+**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available for remix, re-share and even improve upon. For more information about contributing to Sporticon, check out our [Contributing](Contributing.md) documentation (WIP).
 
 ## Acknowledgement 
 
