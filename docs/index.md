@@ -23,7 +23,7 @@ Available under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0){:t
 
 <br>
 
-**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available for remix, re-share and even improve upon. For more information about contributing to Sporticon, check out [“Contributing” documentation →](https://github.com/ookamiinc/Sporticon/master/Contributing.md){: .link-primary} (Coming soon).
+**Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available for remix, re-share and even improve upon. For more information about contributing to Sporticon, check out our [“Contributing” documentation →](https://github.com/ookamiinc/Sporticon/master/Contributing.md){: .link-primary} (Coming soon).
 
 {: .sub-copy}
 See source on our [GitHub](https://github.com/ookamiinc/sporticon).
