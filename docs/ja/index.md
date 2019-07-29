@@ -18,7 +18,7 @@ Supported by [TeamHub](https://tmhub.jp/){: .link-secondary}{:target="_blank"}: 
 **どなたでも商用利用OK・無料でご利用いただけます:** 上のボタンか、下のリストからスポティコンをダウンロードすることができ、デジタル上や印刷物にも使用いただけます。
 
 {: .sub-copy}
-スポティコンの二次配布・再販売を禁止とし、[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} のもと配布されています。
+スポティコンのアイコンを二次配布・再販売を禁止とし、[Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} のもと配布されています。
 
 <br>
 

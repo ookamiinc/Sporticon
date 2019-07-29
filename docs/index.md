@@ -19,7 +19,7 @@ Supported by [TeamHub](https://tmhub.jp/){: .link-secondary}{:target="_blank"}: 
 **Our symbols are free for everyone to use:** Tap & save an icon from the list below or download our set to use them in your digital products, prints and marketing assets.
 
 {: .sub-copy}
-Icons are not for sale, nor for re-selling purposes. Available under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} license.
+Available under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0){:target="_blank"} license, the only thing we ask is that you not re-sell these icons themselves. We'd love attribution in your project, but it is not required.
 
 <br>
 
