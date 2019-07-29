@@ -10,12 +10,6 @@ Player! Sporticon is a simple, delightfully crafted set of symbols made to repre
 
 ## Acknowledgement 
 
-Player! Spoticon is project by @ookamiinc, a joint effort with , all-in-one sports team management app for youth, reacreational and competitive sports teams.
 
-Player! Sporticon is an open-source project maintained by the design team at [ookami](https://ookami.tokyo/) with [@takeisme](http://takeis.me), [@nancytru](https://nancytruong.cargo.site/) and [@riomarmccartney](https://twitter.com/riomarmccartney). 
-
-Supported by [TeamHub](https://tmhub.jp/). 
-
-
-The Sporticon website is built with [Markdown](https://daringfireball.net/projects/markdown/), [Tachyons](https://github.com/tachyons-css/tachyons/) and [Jekyll](https://jekyllrb.com).
+Player! Sporticon is an open-source project maintained by the design team at [ookami](https://ookami.tokyo/) with [@takeisme](http://takeis.me), [@nancytru](https://nancytruong.cargo.site/) and [@riomarmccartney](https://twitter.com/riomarmccartney). Supported by [TeamHub](https://tmhub.jp/). The Sporticon website is built with [Markdown](https://daringfireball.net/projects/markdown/), [Tachyons](https://github.com/tachyons-css/tachyons/) and [Jekyll](https://jekyllrb.com).
 Type is set in [Inter](https://rsms.me/inter/) by [@rsms](https://twitter.com/rsms) for Latin, and [Kinto](https://github.com/ookamiinc/kinto) for Japanese.
