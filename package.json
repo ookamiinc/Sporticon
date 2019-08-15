@@ -18,8 +18,7 @@
     "@babel/register": "^7.5.5",
     "gulp": "^4.0.2",
     "gulp-if": "^3.0.0",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-svgmin": "^2.2.0"
+    "gulp-image": "^5.1.0"
   },
   "dependencies": {}
 }
