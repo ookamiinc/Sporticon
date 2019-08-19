@@ -1,0 +1,818 @@
+@font-face {
+	font-family: "Sporticon";
+	src: url('Sporticon.eot');
+	src: url('Sporticon.eot?#iefix') format('eot'),
+		url('Sporticon.woff2') format('woff2'),
+		url('Sporticon.woff') format('woff'),
+		url('Sporticon.ttf') format('truetype'),
+		url('Sporticon.svg#Sporticon') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "Sporticon";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == 9-man_volleyball {
+		$char: "\E001";
+	}
+	@if $filename == american_football {
+		$char: "\E002";
+	}
+	@if $filename == amputee_football {
+		$char: "\E003";
+	}
+	@if $filename == australian_football {
+		$char: "\E004";
+	}
+	@if $filename == badminton {
+		$char: "\E005";
+	}
+	@if $filename == ball_badminton {
+		$char: "\E006";
+	}
+	@if $filename == bandy {
+		$char: "\E007";
+	}
+	@if $filename == baseball {
+		$char: "\E008";
+	}
+	@if $filename == basketball {
+		$char: "\E009";
+	}
+	@if $filename == basque_pelota {
+		$char: "\E00A";
+	}
+	@if $filename == beach_basketball {
+		$char: "\E00B";
+	}
+	@if $filename == beach_soccer {
+		$char: "\E00C";
+	}
+	@if $filename == beach_tchoukball {
+		$char: "\E00D";
+	}
+	@if $filename == beach_tennis {
+		$char: "\E00E";
+	}
+	@if $filename == beach_ultimate {
+		$char: "\E00F";
+	}
+	@if $filename == beach_volleyball {
+		$char: "\E010";
+	}
+	@if $filename == biribol {
+		$char: "\E011";
+	}
+	@if $filename == boatrace {
+		$char: "\E012";
+	}
+	@if $filename == boccia {
+		$char: "\E013";
+	}
+	@if $filename == bossaball {
+		$char: "\E014";
+	}
+	@if $filename == bound_tennis {
+		$char: "\E015";
+	}
+	@if $filename == bowling {
+		$char: "\E016";
+	}
+	@if $filename == broomball {
+		$char: "\E017";
+	}
+	@if $filename == canadian_football {
+		$char: "\E018";
+	}
+	@if $filename == canoe_polo {
+		$char: "\E019";
+	}
+	@if $filename == climbing {
+		$char: "\E01A";
+	}
+	@if $filename == combat {
+		$char: "\E01B";
+	}
+	@if $filename == crossminton {
+		$char: "\E01C";
+	}
+	@if $filename == curling {
+		$char: "\E01D";
+	}
+	@if $filename == cycle_polo {
+		$char: "\E01E";
+	}
+	@if $filename == cycling {
+		$char: "\E01F";
+	}
+	@if $filename == dance {
+		$char: "\E020";
+	}
+	@if $filename == ecua-volley {
+		$char: "\E021";
+	}
+	@if $filename == esci_tennis {
+		$char: "\E022";
+	}
+	@if $filename == extreme_sports {
+		$char: "\E023";
+	}
+	@if $filename == fencing {
+		$char: "\E024";
+	}
+	@if $filename == figure_skating {
+		$char: "\E025";
+	}
+	@if $filename == fistball {
+		$char: "\E026";
+	}
+	@if $filename == flag_football {
+		$char: "\E027";
+	}
+	@if $filename == floor_ball {
+		$char: "\E028";
+	}
+	@if $filename == floor_hockey {
+		$char: "\E029";
+	}
+	@if $filename == footbag_net {
+		$char: "\E02A";
+	}
+	@if $filename == footvolley {
+		$char: "\E02B";
+	}
+	@if $filename == free_tennis {
+		$char: "\E02C";
+	}
+	@if $filename == frontenis {
+		$char: "\E02D";
+	}
+	@if $filename == futsal {
+		$char: "\E02E";
+	}
+	@if $filename == gaelic_football {
+		$char: "\E02F";
+	}
+	@if $filename == goalball {
+		$char: "\E030";
+	}
+	@if $filename == golf {
+		$char: "\E031";
+	}
+	@if $filename == gymnastics {
+		$char: "\E032";
+	}
+	@if $filename == handball {
+		$char: "\E033";
+	}
+	@if $filename == hardball_squash {
+		$char: "\E034";
+	}
+	@if $filename == hardcourt_bike_polo {
+		$char: "\E035";
+	}
+	@if $filename == hockey {
+		$char: "\E036";
+	}
+	@if $filename == hooverball {
+		$char: "\E037";
+	}
+	@if $filename == horse_racing {
+		$char: "\E038";
+	}
+	@if $filename == hurling {
+		$char: "\E039";
+	}
+	@if $filename == ice_hockey {
+		$char: "\E03A";
+	}
+	@if $filename == indiaca {
+		$char: "\E03B";
+	}
+	@if $filename == inline_hockey {
+		$char: "\E03C";
+	}
+	@if $filename == jai_alai {
+		$char: "\E03D";
+	}
+	@if $filename == judo {
+		$char: "\E03E";
+	}
+	@if $filename == kendo {
+		$char: "\E03F";
+	}
+	@if $filename == kin-ball {
+		$char: "\E040";
+	}
+	@if $filename == korfball {
+		$char: "\E041";
+	}
+	@if $filename == lacrosse {
+		$char: "\E042";
+	}
+	@if $filename == large_ball {
+		$char: "\E043";
+	}
+	@if $filename == marine_sports {
+		$char: "\E044";
+	}
+	@if $filename == mini_basketball {
+		$char: "\E045";
+	}
+	@if $filename == miniten {
+		$char: "\E046";
+	}
+	@if $filename == mothers_volleyball {
+		$char: "\E047";
+	}
+	@if $filename == motorsports {
+		$char: "\E048";
+	}
+	@if $filename == netball {
+		$char: "\E049";
+	}
+	@if $filename == oztag {
+		$char: "\E04A";
+	}
+	@if $filename == padel {
+		$char: "\E04B";
+	}
+	@if $filename == paleta_fronton {
+		$char: "\E04C";
+	}
+	@if $filename == pelota_mixteca {
+		$char: "\E04D";
+	}
+	@if $filename == peteca {
+		$char: "\E04E";
+	}
+	@if $filename == pickleball {
+		$char: "\E04F";
+	}
+	@if $filename == platform_tennis {
+		$char: "\E050";
+	}
+	@if $filename == polo {
+		$char: "\E051";
+	}
+	@if $filename == powerchair_football {
+		$char: "\E052";
+	}
+	@if $filename == quad_hockey {
+		$char: "\E053";
+	}
+	@if $filename == rackets {
+		$char: "\E054";
+	}
+	@if $filename == racquetball {
+		$char: "\E055";
+	}
+	@if $filename == radball-cycle {
+		$char: "\E056";
+	}
+	@if $filename == real_tennis {
+		$char: "\E057";
+	}
+	@if $filename == ringball {
+		$char: "\E058";
+	}
+	@if $filename == ringette {
+		$char: "\E059";
+	}
+	@if $filename == roll_ball {
+		$char: "\E05A";
+	}
+	@if $filename == rowing {
+		$char: "\E05B";
+	}
+	@if $filename == rugby {
+		$char: "\E05C";
+	}
+	@if $filename == sailing {
+		$char: "\E05D";
+	}
+	@if $filename == sepak_takraw {
+		$char: "\E05E";
+	}
+	@if $filename == shinty {
+		$char: "\E05F";
+	}
+	@if $filename == ski_and_snowboard {
+		$char: "\E060";
+	}
+	@if $filename == sledge_hockey {
+		$char: "\E061";
+	}
+	@if $filename == snow_volleyball {
+		$char: "\E062";
+	}
+	@if $filename == soccer {
+		$char: "\E063";
+	}
+	@if $filename == soft_tennis {
+		$char: "\E064";
+	}
+	@if $filename == softball {
+		$char: "\E065";
+	}
+	@if $filename == speed_ball {
+		$char: "\E066";
+	}
+	@if $filename == sports_business {
+		$char: "\E067";
+	}
+	@if $filename == squash {
+		$char: "\E068";
+	}
+	@if $filename == squash_tennis {
+		$char: "\E069";
+	}
+	@if $filename == sticke_tennis {
+		$char: "\E06A";
+	}
+	@if $filename == sumo {
+		$char: "\E06B";
+	}
+	@if $filename == swimming {
+		$char: "\E06C";
+	}
+	@if $filename == table_tennis {
+		$char: "\E06D";
+	}
+	@if $filename == tag_rugby {
+		$char: "\E06E";
+	}
+	@if $filename == taspony {
+		$char: "\E06F";
+	}
+	@if $filename == tchoukball {
+		$char: "\E070";
+	}
+	@if $filename == tennis {
+		$char: "\E071";
+	}
+	@if $filename == throwball {
+		$char: "\E072";
+	}
+	@if $filename == touch_football {
+		$char: "\E073";
+	}
+	@if $filename == touch_rugby {
+		$char: "\E074";
+	}
+	@if $filename == track_and_field {
+		$char: "\E075";
+	}
+	@if $filename == triathlon {
+		$char: "\E076";
+	}
+	@if $filename == ultimate {
+		$char: "\E077";
+	}
+	@if $filename == volleyball {
+		$char: "\E078";
+	}
+	@if $filename == wall-handball {
+		$char: "\E079";
+	}
+	@if $filename == wallyball {
+		$char: "\E07A";
+	}
+	@if $filename == water_basketball {
+		$char: "\E07B";
+	}
+	@if $filename == water_polo {
+		$char: "\E07C";
+	}
+	@if $filename == weightlifting {
+		$char: "\E07D";
+	}
+	@if $filename == wheelchair_basketball {
+		$char: "\E07E";
+	}
+	@if $filename == wheelchair_handball {
+		$char: "\E07F";
+	}
+	@if $filename == wheelchair_rugby {
+		$char: "\E080";
+	}
+	@if $filename == wrestling {
+		$char: "\E081";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-9-man_volleyball {
+	@include icon(9-man_volleyball);
+}
+.icon-american_football {
+	@include icon(american_football);
+}
+.icon-amputee_football {
+	@include icon(amputee_football);
+}
+.icon-australian_football {
+	@include icon(australian_football);
+}
+.icon-badminton {
+	@include icon(badminton);
+}
+.icon-ball_badminton {
+	@include icon(ball_badminton);
+}
+.icon-bandy {
+	@include icon(bandy);
+}
+.icon-baseball {
+	@include icon(baseball);
+}
+.icon-basketball {
+	@include icon(basketball);
+}
+.icon-basque_pelota {
+	@include icon(basque_pelota);
+}
+.icon-beach_basketball {
+	@include icon(beach_basketball);
+}
+.icon-beach_soccer {
+	@include icon(beach_soccer);
+}
+.icon-beach_tchoukball {
+	@include icon(beach_tchoukball);
+}
+.icon-beach_tennis {
+	@include icon(beach_tennis);
+}
+.icon-beach_ultimate {
+	@include icon(beach_ultimate);
+}
+.icon-beach_volleyball {
+	@include icon(beach_volleyball);
+}
+.icon-biribol {
+	@include icon(biribol);
+}
+.icon-boatrace {
+	@include icon(boatrace);
+}
+.icon-boccia {
+	@include icon(boccia);
+}
+.icon-bossaball {
+	@include icon(bossaball);
+}
+.icon-bound_tennis {
+	@include icon(bound_tennis);
+}
+.icon-bowling {
+	@include icon(bowling);
+}
+.icon-broomball {
+	@include icon(broomball);
+}
+.icon-canadian_football {
+	@include icon(canadian_football);
+}
+.icon-canoe_polo {
+	@include icon(canoe_polo);
+}
+.icon-climbing {
+	@include icon(climbing);
+}
+.icon-combat {
+	@include icon(combat);
+}
+.icon-crossminton {
+	@include icon(crossminton);
+}
+.icon-curling {
+	@include icon(curling);
+}
+.icon-cycle_polo {
+	@include icon(cycle_polo);
+}
+.icon-cycling {
+	@include icon(cycling);
+}
+.icon-dance {
+	@include icon(dance);
+}
+.icon-ecua-volley {
+	@include icon(ecua-volley);
+}
+.icon-esci_tennis {
+	@include icon(esci_tennis);
+}
+.icon-extreme_sports {
+	@include icon(extreme_sports);
+}
+.icon-fencing {
+	@include icon(fencing);
+}
+.icon-figure_skating {
+	@include icon(figure_skating);
+}
+.icon-fistball {
+	@include icon(fistball);
+}
+.icon-flag_football {
+	@include icon(flag_football);
+}
+.icon-floor_ball {
+	@include icon(floor_ball);
+}
+.icon-floor_hockey {
+	@include icon(floor_hockey);
+}
+.icon-footbag_net {
+	@include icon(footbag_net);
+}
+.icon-footvolley {
+	@include icon(footvolley);
+}
+.icon-free_tennis {
+	@include icon(free_tennis);
+}
+.icon-frontenis {
+	@include icon(frontenis);
+}
+.icon-futsal {
+	@include icon(futsal);
+}
+.icon-gaelic_football {
+	@include icon(gaelic_football);
+}
+.icon-goalball {
+	@include icon(goalball);
+}
+.icon-golf {
+	@include icon(golf);
+}
+.icon-gymnastics {
+	@include icon(gymnastics);
+}
+.icon-handball {
+	@include icon(handball);
+}
+.icon-hardball_squash {
+	@include icon(hardball_squash);
+}
+.icon-hardcourt_bike_polo {
+	@include icon(hardcourt_bike_polo);
+}
+.icon-hockey {
+	@include icon(hockey);
+}
+.icon-hooverball {
+	@include icon(hooverball);
+}
+.icon-horse_racing {
+	@include icon(horse_racing);
+}
+.icon-hurling {
+	@include icon(hurling);
+}
+.icon-ice_hockey {
+	@include icon(ice_hockey);
+}
+.icon-indiaca {
+	@include icon(indiaca);
+}
+.icon-inline_hockey {
+	@include icon(inline_hockey);
+}
+.icon-jai_alai {
+	@include icon(jai_alai);
+}
+.icon-judo {
+	@include icon(judo);
+}
+.icon-kendo {
+	@include icon(kendo);
+}
+.icon-kin-ball {
+	@include icon(kin-ball);
+}
+.icon-korfball {
+	@include icon(korfball);
+}
+.icon-lacrosse {
+	@include icon(lacrosse);
+}
+.icon-large_ball {
+	@include icon(large_ball);
+}
+.icon-marine_sports {
+	@include icon(marine_sports);
+}
+.icon-mini_basketball {
+	@include icon(mini_basketball);
+}
+.icon-miniten {
+	@include icon(miniten);
+}
+.icon-mothers_volleyball {
+	@include icon(mothers_volleyball);
+}
+.icon-motorsports {
+	@include icon(motorsports);
+}
+.icon-netball {
+	@include icon(netball);
+}
+.icon-oztag {
+	@include icon(oztag);
+}
+.icon-padel {
+	@include icon(padel);
+}
+.icon-paleta_fronton {
+	@include icon(paleta_fronton);
+}
+.icon-pelota_mixteca {
+	@include icon(pelota_mixteca);
+}
+.icon-peteca {
+	@include icon(peteca);
+}
+.icon-pickleball {
+	@include icon(pickleball);
+}
+.icon-platform_tennis {
+	@include icon(platform_tennis);
+}
+.icon-polo {
+	@include icon(polo);
+}
+.icon-powerchair_football {
+	@include icon(powerchair_football);
+}
+.icon-quad_hockey {
+	@include icon(quad_hockey);
+}
+.icon-rackets {
+	@include icon(rackets);
+}
+.icon-racquetball {
+	@include icon(racquetball);
+}
+.icon-radball-cycle {
+	@include icon(radball-cycle);
+}
+.icon-real_tennis {
+	@include icon(real_tennis);
+}
+.icon-ringball {
+	@include icon(ringball);
+}
+.icon-ringette {
+	@include icon(ringette);
+}
+.icon-roll_ball {
+	@include icon(roll_ball);
+}
+.icon-rowing {
+	@include icon(rowing);
+}
+.icon-rugby {
+	@include icon(rugby);
+}
+.icon-sailing {
+	@include icon(sailing);
+}
+.icon-sepak_takraw {
+	@include icon(sepak_takraw);
+}
+.icon-shinty {
+	@include icon(shinty);
+}
+.icon-ski_and_snowboard {
+	@include icon(ski_and_snowboard);
+}
+.icon-sledge_hockey {
+	@include icon(sledge_hockey);
+}
+.icon-snow_volleyball {
+	@include icon(snow_volleyball);
+}
+.icon-soccer {
+	@include icon(soccer);
+}
+.icon-soft_tennis {
+	@include icon(soft_tennis);
+}
+.icon-softball {
+	@include icon(softball);
+}
+.icon-speed_ball {
+	@include icon(speed_ball);
+}
+.icon-sports_business {
+	@include icon(sports_business);
+}
+.icon-squash {
+	@include icon(squash);
+}
+.icon-squash_tennis {
+	@include icon(squash_tennis);
+}
+.icon-sticke_tennis {
+	@include icon(sticke_tennis);
+}
+.icon-sumo {
+	@include icon(sumo);
+}
+.icon-swimming {
+	@include icon(swimming);
+}
+.icon-table_tennis {
+	@include icon(table_tennis);
+}
+.icon-tag_rugby {
+	@include icon(tag_rugby);
+}
+.icon-taspony {
+	@include icon(taspony);
+}
+.icon-tchoukball {
+	@include icon(tchoukball);
+}
+.icon-tennis {
+	@include icon(tennis);
+}
+.icon-throwball {
+	@include icon(throwball);
+}
+.icon-touch_football {
+	@include icon(touch_football);
+}
+.icon-touch_rugby {
+	@include icon(touch_rugby);
+}
+.icon-track_and_field {
+	@include icon(track_and_field);
+}
+.icon-triathlon {
+	@include icon(triathlon);
+}
+.icon-ultimate {
+	@include icon(ultimate);
+}
+.icon-volleyball {
+	@include icon(volleyball);
+}
+.icon-wall-handball {
+	@include icon(wall-handball);
+}
+.icon-wallyball {
+	@include icon(wallyball);
+}
+.icon-water_basketball {
+	@include icon(water_basketball);
+}
+.icon-water_polo {
+	@include icon(water_polo);
+}
+.icon-weightlifting {
+	@include icon(weightlifting);
+}
+.icon-wheelchair_basketball {
+	@include icon(wheelchair_basketball);
+}
+.icon-wheelchair_handball {
+	@include icon(wheelchair_handball);
+}
+.icon-wheelchair_rugby {
+	@include icon(wheelchair_rugby);
+}
+.icon-wrestling {
+	@include icon(wrestling);
+}
