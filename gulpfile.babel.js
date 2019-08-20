@@ -7,7 +7,7 @@ import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 import svgSprite from 'gulp-svg-sprite';
 
-const fontName = 'Sporticon';
+const projectName = 'Sporticon';
 const productionAssets = 'src/production'
 
 /**
@@ -51,43 +51,26 @@ gulp.task('pdfExport', function () {
         }))
         .pipe(gulp.dest(productionAssets + '/pdf'));
 });
+
 /**
  * Generate font formats from SVG
  * Note quoted from the author: While this plugin may still be useful for fonts generation or old browser support, you should consider using SVG icons directly.
  * More information at https://www.sarasoueidan.com/blog/icon-fonts-to-svg/
  */
-
 var runTimestamp = Math.round(Date.now()/1000);
-/*
-gulp.task('Iconfont', function(){
-    return gulp.src(productionAssets + '/svg/*.svg')
-        .pipe(iconfont({
-            fontName: fontName,
-            prependUnicode: false,
-            formats: ['ttf', 'eot', 'woff', 'woff2'],
-            timestamp: runTimestamp,
-            fontHeight: 1024
-        }))
-        .on('glyphs', function(glyphs, options) {
-          // CSS templating, e.g.
-          console.log(glyphs, options);
-        })
-      .pipe(gulp.dest(productionAssets + '/fonts'));
-});
-*/
 
 gulp.task('iconfont', function(){
     return gulp.src(productionAssets + '/svg/*.svg')
       .pipe(iconfontCss({
-        fontName: fontName,
+        fontName: projectName,
         path: 'node_modules/gulp-iconfont-css/templates/_icons.scss',
         targetPath: '_icons.scss',
         fontPath: ''
       }))
       .pipe(iconfont({
-        fontName: fontName,
+        fontName: projectName,
         prependUnicode: false,
-        formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+        formats: ['ttf', 'eot', 'woff', 'woff2'],
         timestamp: runTimestamp,
         fontHeight: 1024
        }))
@@ -96,7 +79,7 @@ gulp.task('iconfont', function(){
         console.log(glyphs, options);
       })
       .pipe(gulp.dest(productionAssets + '/fonts'));
-  });
+});
 
 /**
  * Generate SVG Sprite in CSS format
