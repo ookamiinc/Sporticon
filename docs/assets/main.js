@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('modalPNGDownload').setAttribute("href", selectedGlyph.dataset.png);
         document.getElementById('modalSVGDownload').setAttribute("sportsid", selectedGlyph.dataset.id);
         document.getElementById('modalPNGDownload').setAttribute("sportsid", selectedGlyph.dataset.id);
+        
         // Arrow control events
         document.onkeydown = function(event) {
             switch (event.keyCode) {
