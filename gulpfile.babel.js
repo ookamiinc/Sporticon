@@ -103,3 +103,7 @@ gulp.task('createSprite', function(){
 });
 
 gulp.task('default', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont'));gulp.task('export', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont', 'createSprite'));
+gulp.task('moveGlyph', function(){
+    return gulp.src(productionAssets + '/css/sprite.scss')
+        .pipe(gulp.dest('docs/_sass'));
+});
