@@ -102,8 +102,10 @@ gulp.task('createSprite', function(){
         .pipe(gulp.dest(productionAssets));
 });
 
-gulp.task('default', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont'));gulp.task('export', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont', 'createSprite'));
 gulp.task('moveGlyph', function(){
     return gulp.src(productionAssets + '/css/sprite.scss')
         .pipe(gulp.dest('docs/_sass'));
 });
+
+gulp.task('export', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont', 'createSprite'));
+gulp.task('servePages', gulp.series('moveGlyph'));
