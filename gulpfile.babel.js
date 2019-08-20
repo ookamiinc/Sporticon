@@ -5,6 +5,7 @@ import optimize from 'gulp-image';
 import convert from 'gulp-rsvg';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
+import svgSprite from 'gulp-svg-sprite';
 
 const fontName = 'Sporticon';
 const productionAssets = 'src/production'
@@ -97,4 +98,25 @@ gulp.task('iconfont', function(){
       .pipe(gulp.dest(productionAssets + '/fonts'));
   });
 
-gulp.task('default', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont'));
+/**
+ * Generate SVG Sprite in CSS format
+ */
+gulp.task('createSprite', function(){
+    return gulp.src(productionAssets + '/svg/*.svg')
+        .pipe(svgSprite({
+            mode: {
+                css: {
+                    dimensions: false,
+                    render: {
+                        css: true,
+                        scss: true
+                    },
+                    example: true,
+                    bust: false,
+                },
+            }
+        }))
+        .pipe(gulp.dest(productionAssets));
+});
+
+gulp.task('default', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont'));gulp.task('export', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont', 'createSprite'));

@@ -22,6 +22,7 @@
     "gulp-if": "^3.0.0",
     "gulp-image": "^5.1.0",
     "gulp-rsvg": "^1.0.2",
+    "gulp-svg-sprite": "^1.5.0",
     "librsvg": "^0.7.0"
   },
   "dependencies": {}
