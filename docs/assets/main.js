@@ -36,15 +36,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
         debugMode: false // [8]
     });
 
-    // Get icon data
-
+    /*
+    Get icon data + set selected glyph information 
+    Push Preview category event to analyticsEvent in gtag */
     var eachGlyph = document.getElementsByClassName('eachIcon');
     for (var i = 0; i < eachGlyph.length; i++) {
         eachGlyph[i].addEventListener("click", function (event){
         switchGlyph(event.currentTarget);
-      });
+            window.dataLayer.push({
+                event: 'analyticsEvent',
+                eventCategory: 'Preview',
+                eventAction: 'Modal Open',
+                eventLabel: event.currentTarget.dataset.id
+            });
+        });
     };
     function switchGlyph(selectedGlyph){
+
+    /* 
+    Populate Modal with glyph information from the selected glyph 
+    Push events done in Modal to analyticsEvent in gtag */
         document.getElementById('modalGlyph').style.backgroundImage = "url(" + selectedGlyph.dataset.svg + "?sanitize=true)";
         document.getElementById('modalTitle').innerHTML = selectedGlyph.dataset.name;
         document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
@@ -58,6 +69,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                case 37:
                     if (selectedGlyph.previousElementSibling != null) {
                         switchGlyph(selectedGlyph.previousElementSibling);
+                        window.dataLayer.push({
+                            event: 'analyticsEvent',
+                            eventCategory: 'Preview',
+                            eventAction: 'ModalPrevious',
+                            eventLabel: selectedGlyph.previousElementSibling.dataset.id
                         return;
                     } else {
                         break;
@@ -65,11 +81,46 @@ document.addEventListener("DOMContentLoaded", function(event) {
                case 39:
                     if (selectedGlyph.nextElementSibling != null) {
                         switchGlyph(selectedGlyph.nextElementSibling);
+                        window.dataLayer.push({
+                            event: 'analyticsEvent',
+                            eventCategory: 'Preview',
+                            eventAction: 'Modal Next',
+                            eventLabel: selectedGlyph.nextElementSibling.dataset.id
+                        });
                         return;
                     } else {
                         break;
                     };
             };
         };
+
+        // Click control events
+        document.getElementById('modalPNGDownload').addEventListener("click", function (){
+            window.dataLayer.push({
+                event: 'analyticsEvent',
+                eventCategory: 'Download',
+                eventAction: 'PNG',
+                eventLabel: selectedGlyph.dataset.id
+            });
+        });
+        document.getElementById('modalSVGDownload').addEventListener("click", function (){
+            window.dataLayer.push({
+                event: 'analyticsEvent',
+                eventCategory: 'Download',
+                eventAction: 'SVG',
+                eventLabel: selectedGlyph.dataset.id
+            });
+        });
     }
+
+    /* 
+    Push downloadAll event to analyticsEvent in gtag */
+    document.getElementById('downloadAll').addEventListener("click", function (){
+        window.dataLayer.push({
+            event: 'analyticsEvent',
+            eventCategory: 'Download',
+            eventAction: '',
+            eventLabel: 'set'
+        });
+    });
 });
