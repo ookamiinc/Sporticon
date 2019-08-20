@@ -25,7 +25,7 @@ o.targetModal=s,o.triggers=[].concat(t(l)),new n(o)}},show:function(e,o){var t=o
 t.targetModal=e,!0===t.debugMode&&!1===s(e)||(a=new n(t),a.showModal())},close:function(e){e?a.closeModalById(e):a.closeModal()}}}()})
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
     // Modal setup
     MicroModal.init({
         openTrigger: 'data-micromodal-trigger', // [3]
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var eachGlyph = document.getElementsByClassName('eachIcon');
     for (var i = 0; i < eachGlyph.length; i++) {
         eachGlyph[i].addEventListener("click", function (event){
-        switchGlyph(event.currentTarget);
+            setGlyphInformation(event.currentTarget);
             window.dataLayer.push({
                 event: 'analyticsEvent',
                 eventCategory: 'Preview',
@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             });
         });
     };
-    function switchGlyph(selectedGlyph){
 
     /* 
     Populate Modal with glyph information from the selected glyph 
     Push events done in Modal to analyticsEvent in gtag */
+    function setGlyphInformation(selectedGlyph){
         document.getElementById('modalGlyph').style.backgroundImage = "url(" + selectedGlyph.dataset.svg + "?sanitize=true)";
         document.getElementById('modalTitle').innerHTML = selectedGlyph.dataset.name;
         document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
@@ -68,19 +68,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
             switch (event.keyCode) {
                case 37:
                     if (selectedGlyph.previousElementSibling != null) {
-                        switchGlyph(selectedGlyph.previousElementSibling);
+                        setGlyphInformation(selectedGlyph.previousElementSibling);
                         window.dataLayer.push({
                             event: 'analyticsEvent',
                             eventCategory: 'Preview',
                             eventAction: 'ModalPrevious',
                             eventLabel: selectedGlyph.previousElementSibling.dataset.id
+                        });
                         return;
                     } else {
                         break;
                     };
                case 39:
                     if (selectedGlyph.nextElementSibling != null) {
-                        switchGlyph(selectedGlyph.nextElementSibling);
+                        setGlyphInformation(selectedGlyph.nextElementSibling);
                         window.dataLayer.push({
                             event: 'analyticsEvent',
                             eventCategory: 'Preview',
