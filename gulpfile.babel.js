@@ -8,14 +8,15 @@ import iconfontCss from 'gulp-iconfont-css';
 import svgSprite from 'gulp-svg-sprite';
 
 const projectName = 'Sporticon';
-const productionAssets = 'src/production'
+const productionAssets = 'src/production';
+const productionDesign = 'src/design';
 
 /**
  * Optimize SVGs using SVGO.
  * The svgCompression task minimize the SVGs even further for web use.
  */
 gulp.task('svgScale', function () {
-    return gulp.src(productionAssets + '/svg/*.svg')
+    return gulp.src(productionDesign + '/svg/*.svg')
         .pipe(convert({
             format: 'svg',
             width: 1000,
@@ -108,4 +109,4 @@ gulp.task('moveGlyph', function(){
 });
 
 gulp.task('export', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont', 'createSprite'));
-gulp.task('servePages', gulp.series('moveGlyph'));
+gulp.task('css', gulp.series('moveGlyph'));
