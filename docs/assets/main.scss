@@ -1,11 +1,17 @@
 ---
 ---
 
+$icons: 129;
+
 // Import Tachyons
 @import "iconPreviewModal.scss";
 @import "tachyons.scss";
+
+// Import Systems
+@import "sprite.scss";
 @import "_typography.scss";
 @import "_wdl-color.scss";
+
 
 // Mixin
 @mixin divider {
@@ -226,5 +232,7 @@ i {
     @extend .contain;
     @extend .aspect-ratio--object;
     width: 100%;
-    background: no-repeat center;
+    background-repeat: no-repeat center;
+    background-size: calc(#{$icons} * 100%) 100% !important;
+
 }
