@@ -17,11 +17,13 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "gulp-iconfont": "^10.0.3",
     "gulp-iconfont-css": "^3.0.0",
     "gulp-if": "^3.0.0",
     "gulp-image": "^5.1.0",
     "gulp-rsvg": "^1.0.2",
+    "gulp-string-replace": "^1.1.2",
     "gulp-svg-sprite": "^1.5.0",
     "librsvg": "^0.7.0"
   },
