@@ -51,12 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     };
-
-    /* 
-    Populate Modal with glyph information from the selected glyph 
-    Push events done in Modal to analyticsEvent in gtag */
     function setGlyphInformation(selectedGlyph){
-        document.getElementById('modalGlyph').style.backgroundImage = "url(" + selectedGlyph.dataset.svg + "?sanitize=true)";
+        document.getElementById('modalGlyph').className = "svg-" + selectedGlyph.dataset.sportname;
+        document.getElementById('modalGlyph').classList.add("svg-" + selectedGlyph.dataset.sportname); 
         document.getElementById('modalTitle').innerHTML = selectedGlyph.dataset.name;
         document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
         document.getElementById('modalSVGDownload').setAttribute("href", selectedGlyph.dataset.svg);
