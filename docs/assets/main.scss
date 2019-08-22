@@ -1,17 +1,16 @@
 ---
 ---
 
-$icons: 129;
-
 // Import Tachyons
 @import "iconPreviewModal.scss";
 @import "tachyons.scss";
 
 // Import Systems
-@import "sprite.scss";
 @import "_typography.scss";
 @import "_wdl-color.scss";
+@import "sprite.scss";
 
+$sumIcons: {% assign variable = 0 %}{% for i in site.data.sporticon_definitions %}{% assign variable = variable | plus: 1 %}{% endfor %}{{ variable }};
 
 // Mixin
 @mixin divider {
@@ -233,6 +232,5 @@ i {
     @extend .aspect-ratio--object;
     width: 100%;
     background-repeat: no-repeat center;
-    background-size: calc(#{$icons} * 100%) 100% !important;
-
+    background-size: calc(#{$sumIcons} * 100%) 100% !important;
 }
