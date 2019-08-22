@@ -6,8 +6,18 @@ import convert from 'gulp-rsvg';
 import iconfont from 'gulp-iconfont';
 import iconfontCss from 'gulp-iconfont-css';
 import svgSprite from 'gulp-svg-sprite';
+import replace from 'gulp-string-replace';
+import clean from 'gulp-clean';
 
 const projectName = 'Sporticon';
+const productionSVG = 'src/production/svg/*.svg'
+const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/export-automation/src/production/css/svg/sprite.css.svg?sanitize=true';
+
+
+gulp.task('cleanProduction', function () {
+    return gulp.src('src/production', {read: false})
+        .pipe(clean());
+});
 
 /**
  * Optimize SVGs using SVGO.
@@ -88,14 +98,15 @@ gulp.task('createSprite', function(){
         .pipe(svgSprite({
             mode: {
                 css: {
+                    layout: 'horizontal',
                     dimensions: false,
                     render: {
-                        css: true,
+                        css: false,
                         scss: true
                     },
                     example: true,
                     bust: false,
-                },
+                }
             }
         })) 
         .pipe(gulp.dest('src/production'));
@@ -105,6 +116,11 @@ gulp.task('moveGlyph', function(){
     return gulp.src('src/production/css/sprite.scss')
         .pipe(gulp.dest('docs/_sass'));
 });
+gulp.task('replaceSpriteSrc', function() {
+    return gulp.src('docs/_sass/sprite.scss', { base: './' })
+      .pipe(replace('svg/sprite.css.svg', srcSpriteSvg))
+      .pipe(gulp.dest('.'));
+  });
 
 gulp.task('production', gulp.series('cleanProduction', 'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite'));
 gulp.task('css', gulp.series('moveGlyph', 'replaceSpriteSrc'));
