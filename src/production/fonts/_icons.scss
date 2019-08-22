@@ -78,7 +78,7 @@
 	@if $filename == biribol {
 		$char: "\E011";
 	}
-	@if $filename == boatrace {
+	@if $filename == boat_race {
 		$char: "\E012";
 	}
 	@if $filename == boccia {
@@ -123,7 +123,7 @@
 	@if $filename == dance {
 		$char: "\E020";
 	}
-	@if $filename == ecua-volley {
+	@if $filename == ecua_volley {
 		$char: "\E021";
 	}
 	@if $filename == esci_tennis {
@@ -222,7 +222,7 @@
 	@if $filename == korfball {
 		$char: "\E041";
 	}
-	@if $filename == lacrosse {
+	@if $filename == lacross {
 		$char: "\E042";
 	}
 	@if $filename == large_ball {
@@ -282,7 +282,7 @@
 	@if $filename == racquetball {
 		$char: "\E055";
 	}
-	@if $filename == radball-cycle {
+	@if $filename == radball {
 		$char: "\E056";
 	}
 	@if $filename == real_tennis {
@@ -387,7 +387,7 @@
 	@if $filename == volleyball {
 		$char: "\E078";
 	}
-	@if $filename == wall-handball {
+	@if $filename == wall_handball {
 		$char: "\E079";
 	}
 	@if $filename == wallyball {
@@ -480,8 +480,8 @@
 .icon-biribol {
 	@include icon(biribol);
 }
-.icon-boatrace {
-	@include icon(boatrace);
+.icon-boat_race {
+	@include icon(boat_race);
 }
 .icon-boccia {
 	@include icon(boccia);
@@ -525,8 +525,8 @@
 .icon-dance {
 	@include icon(dance);
 }
-.icon-ecua-volley {
-	@include icon(ecua-volley);
+.icon-ecua_volley {
+	@include icon(ecua_volley);
 }
 .icon-esci_tennis {
 	@include icon(esci_tennis);
@@ -624,8 +624,8 @@
 .icon-korfball {
 	@include icon(korfball);
 }
-.icon-lacrosse {
-	@include icon(lacrosse);
+.icon-lacross {
+	@include icon(lacross);
 }
 .icon-large_ball {
 	@include icon(large_ball);
@@ -684,8 +684,8 @@
 .icon-racquetball {
 	@include icon(racquetball);
 }
-.icon-radball-cycle {
-	@include icon(radball-cycle);
+.icon-radball {
+	@include icon(radball);
 }
 .icon-real_tennis {
 	@include icon(real_tennis);
@@ -789,8 +789,8 @@
 .icon-volleyball {
 	@include icon(volleyball);
 }
-.icon-wall-handball {
-	@include icon(wall-handball);
+.icon-wall_handball {
+	@include icon(wall_handball);
 }
 .icon-wallyball {
 	@include icon(wallyball);

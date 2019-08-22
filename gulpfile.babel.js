@@ -8,49 +8,47 @@ import iconfontCss from 'gulp-iconfont-css';
 import svgSprite from 'gulp-svg-sprite';
 
 const projectName = 'Sporticon';
-const productionAssets = 'src/production';
-const productionDesign = 'src/design';
 
 /**
  * Optimize SVGs using SVGO.
  * The svgCompression task minimize the SVGs even further for web use.
  */
 gulp.task('svgScale', function () {
-    return gulp.src(productionDesign + '/svg/*.svg')
+    return gulp.src('src/design/svg/*.svg')
         .pipe(convert({
             format: 'svg',
             width: 1000,
             height: 1000
         }))
-        .pipe(gulp.dest(productionAssets + '/svg'));
+        .pipe(gulp.dest('src/production/svg'));
 });
 gulp.task('svgOptimization', () => {
-    return gulp.src(productionAssets + '/svg/*.svg')
+    return gulp.src(productionSVG, { base: './' })
         .pipe(optimize({
             svgo: ['--disable', 'convertPathData'],
             concurrent: 10
         }))
-        .pipe(gulp.dest(productionAssets + '/svg'));
+        .pipe(gulp.dest('.'));
 });
 gulp.task('svgCompression', () => {
-    return gulp.src(productionAssets + '/svg/*.svg')
+    return gulp.src(productionSVG)
         .pipe(optimize())
-        .pipe(gulp.dest(productionAssets + '/svg_compressed'));
+        .pipe(gulp.dest('src/production/svg_compressed'));
 });
 /**
  * Export in PNG + PDF format using librsvg
  */
-gulp.task('pngExport', function () {
-    return gulp.src(productionAssets + '/svg/*.svg')
+gulp.task('createPNG', function () {
+    return gulp.src(productionSVG)
         .pipe(convert())
-        .pipe(gulp.dest(productionAssets + '/png'));
+        .pipe(gulp.dest('src/production/png'));
 });
-gulp.task('pdfExport', function () {
-    return gulp.src(productionAssets + '/svg/*.svg')
+gulp.task('createPDF', function () {
+    return gulp.src(productionSVG)
         .pipe(convert({
             format: 'pdf'
         }))
-        .pipe(gulp.dest(productionAssets + '/pdf'));
+        .pipe(gulp.dest('src/production/pdf'));
 });
 
 /**
@@ -60,8 +58,8 @@ gulp.task('pdfExport', function () {
  */
 var runTimestamp = Math.round(Date.now()/1000);
 
-gulp.task('iconfont', function(){
-    return gulp.src(productionAssets + '/svg/*.svg')
+gulp.task('createFont', function(){
+    return gulp.src(productionSVG)
       .pipe(iconfontCss({
         fontName: projectName,
         path: 'node_modules/gulp-iconfont-css/templates/_icons.scss',
@@ -79,14 +77,14 @@ gulp.task('iconfont', function(){
         // CSS templating, e.g.
         console.log(glyphs, options);
       })
-      .pipe(gulp.dest(productionAssets + '/fonts'));
+      .pipe(gulp.dest('src/production/fonts'));
 });
 
 /**
  * Generate SVG Sprite in CSS format
  */
 gulp.task('createSprite', function(){
-    return gulp.src(productionAssets + '/svg/*.svg')
+    return gulp.src(productionSVG)
         .pipe(svgSprite({
             mode: {
                 css: {
@@ -99,14 +97,14 @@ gulp.task('createSprite', function(){
                     bust: false,
                 },
             }
-        }))
-        .pipe(gulp.dest(productionAssets));
+        })) 
+        .pipe(gulp.dest('src/production'));
 });
 
 gulp.task('moveGlyph', function(){
-    return gulp.src(productionAssets + '/css/sprite.scss')
+    return gulp.src('src/production/css/sprite.scss')
         .pipe(gulp.dest('docs/_sass'));
 });
 
-gulp.task('export', gulp.series('svgScale', 'svgOptimization', 'svgCompression', 'pngExport', 'pdfExport', 'iconfont', 'createSprite'));
-gulp.task('css', gulp.series('moveGlyph'));
+gulp.task('production', gulp.series('cleanProduction', 'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite'));
+gulp.task('css', gulp.series('moveGlyph', 'replaceSpriteSrc'));
