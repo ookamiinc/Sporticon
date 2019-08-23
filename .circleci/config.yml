@@ -1,6 +1,22 @@
 version: 2
 jobs:
-  deploy:
+  build-production:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:10.15.0
+    environment:
+      - NODE_ENV: development
+    steps:
+      - checkout
+      - run: sudo npm install -g npm
+      - run: sudo npm install -g gulp-cli
+      - run: npm install
+      - run: gulp production
+      - run: gulp css
+      - deploy:
+          name: Deploy Production to GitHub
+          command: bash .circleci/deploy-production.sh
+  deploy-site:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
         environment:
@@ -15,13 +31,15 @@ jobs:
       - run: cd docs/ && bundle install
       - run: cd docs/ && bundle exec jekyll build
       - deploy:
-          name: Deploy Release to GitHub
-          command: |
-            if [ $CIRCLE_BRANCH == 'master' ]; then
-              bash .circleci/deploy-gh-pages.sh
-            fi
+          name: Deploy Site to GitHub
+          command: bash .circleci/deploy-gh-pages.sh
 workflows:
   version: 2
   build:
     jobs:
-      - deploy
+      - build-production
+      - deploy-site:
+          filters:
+            branches:
+              only: /master/
+          
