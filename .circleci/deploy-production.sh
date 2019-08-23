@@ -1,8 +1,11 @@
 git config user.name "$USER_NAME"
 git config user.email "$USER_EMAIL"
 
-git add -fA
-git commit --allow-empty -m "Build Production from $(git log -1 --pretty=%B)"
-git push origin
+rm -rf src/production 
+mv src/build src/production 
+git add src/production
+git add docs/_sass/sprite.scss
+git commit -m "Deploy Production from $(git log -1 --format=%h)"
+git push origin develop
 
-echo "Built production successfully"
+echo "Built Production successfully"

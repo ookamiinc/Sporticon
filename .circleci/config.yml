@@ -11,10 +11,10 @@ jobs:
       - run: sudo npm install -g npm
       - run: sudo npm install -g gulp-cli
       - run: npm install
-      - run: gulp production
-      - run: gulp css
+      - run: gulp build
+      - run: gulp update-css
       - deploy:
-          name: Deploy Production to GitHub
+          name: Deploy Production
           command: bash .circleci/deploy-production.sh
   deploy-site:
     docker:
@@ -37,9 +37,12 @@ workflows:
   version: 2
   build:
     jobs:
-      - build-production
+      - build-production: 
+          filters:
+            branches:
+              only: develop
       - deploy-site:
           filters:
             branches:
-              only: /master/
+              only: master
           
