@@ -11,7 +11,7 @@ import clean from 'gulp-clean';
 
 const projectName = 'Sporticon';
 const productionSVG = 'src/build/svg/*.svg'
-const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/build/css/svg/sprite.css.svg?sanitize=true';
+const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/production/css/svg/sprite.css.svg?sanitize=true';
 
 
 gulp.task('cleanProduction', function () {
