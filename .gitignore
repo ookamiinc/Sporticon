@@ -1,2 +1,11 @@
+# Jekyll
 .jekyll-metadata
-_site/
+_site
+
+# Gulp build
+src/build
+
+# npm dependency
+node_modules
+
+# 

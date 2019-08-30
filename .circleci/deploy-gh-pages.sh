@@ -9,7 +9,7 @@ mv docs/_site/* .
 rm -R docs
 
 git add -fA
-git commit --allow-empty -m "$(git log master -1 --pretty=%B)"
+git commit --allow-empty -m "Deploy Site from $(git log master -1 --pretty=%B)"
 git push origin gh-pages
 
-echo "deployed successfully"
+echo "Deployed Site successfully"

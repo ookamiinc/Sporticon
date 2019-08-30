@@ -1,0 +1,31 @@
+{
+  "name": "sporticon",
+  "version": "1.0.0",
+  "description": "Player! Sporticon is a simple, delightfully crafted set of symbols made to represent sports from a wide range of disciplines.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ookamiinc/Sporticon.git"
+  },
+  "author": "sporticon authors",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ookamiinc/Sporticon/issues"
+  },
+  "homepage": "https://sporticon.ookami.tokyo",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-image": "^5.1.0",
+    "gulp-rsvg": "^1.0.2",
+    "gulp-string-replace": "^1.1.2",
+    "gulp-svg-sprite": "^1.5.0",
+    "librsvg": "^0.7.0"
+  },
+  "dependencies": {}
+}
