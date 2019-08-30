@@ -25,7 +25,7 @@ o.targetModal=s,o.triggers=[].concat(t(l)),new n(o)}},show:function(e,o){var t=o
 t.targetModal=e,!0===t.debugMode&&!1===s(e)||(a=new n(t),a.showModal())},close:function(e){e?a.closeModalById(e):a.closeModal()}}}()})
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
     // Modal setup
     MicroModal.init({
         openTrigger: 'data-micromodal-trigger', // [3]
@@ -36,39 +36,90 @@ document.addEventListener("DOMContentLoaded", function(event) {
         debugMode: false // [8]
     });
 
-    // Get icon data
-
+    /*
+    Get icon data + set selected glyph information 
+    Push Preview category event to analyticsEvent in gtag */
     var eachGlyph = document.getElementsByClassName('eachIcon');
     for (var i = 0; i < eachGlyph.length; i++) {
         eachGlyph[i].addEventListener("click", function (event){
-        switchGlyph(event.currentTarget);
-      });
+            setGlyphInformation(event.currentTarget);
+            window.dataLayer.push({
+                event: 'analyticsEvent',
+                eventCategory: 'Preview',
+                eventAction: 'Modal Open',
+                eventLabel: event.currentTarget.dataset.id
+            });
+        });
     };
-    function switchGlyph(selectedGlyph){
-        document.getElementById('modalGlyph').style.backgroundImage = "url(" + selectedGlyph.dataset.svg + "?sanitize=true)";
+    function setGlyphInformation(selectedGlyph){
+        document.getElementById('modalGlyph').className = "svg-" + selectedGlyph.dataset.sportname;
+        document.getElementById('modalGlyph').classList.add("svg-" + selectedGlyph.dataset.sportname); 
         document.getElementById('modalTitle').innerHTML = selectedGlyph.dataset.name;
         document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
         document.getElementById('modalSVGDownload').setAttribute("href", selectedGlyph.dataset.svg);
         document.getElementById('modalPNGDownload').setAttribute("href", selectedGlyph.dataset.png);
-
+        document.getElementById('modalSVGDownload').setAttribute("sportsid", selectedGlyph.dataset.id);
+        document.getElementById('modalPNGDownload').setAttribute("sportsid", selectedGlyph.dataset.id);
+        
         // Arrow control events
         document.onkeydown = function(event) {
             switch (event.keyCode) {
                case 37:
                     if (selectedGlyph.previousElementSibling != null) {
-                        switchGlyph(selectedGlyph.previousElementSibling);
+                        setGlyphInformation(selectedGlyph.previousElementSibling);
+                        window.dataLayer.push({
+                            event: 'analyticsEvent',
+                            eventCategory: 'Preview',
+                            eventAction: 'ModalPrevious',
+                            eventLabel: selectedGlyph.previousElementSibling.dataset.id
+                        });
                         return;
                     } else {
                         break;
                     };
                case 39:
                     if (selectedGlyph.nextElementSibling != null) {
-                        switchGlyph(selectedGlyph.nextElementSibling);
+                        setGlyphInformation(selectedGlyph.nextElementSibling);
+                        window.dataLayer.push({
+                            event: 'analyticsEvent',
+                            eventCategory: 'Preview',
+                            eventAction: 'Modal Next',
+                            eventLabel: selectedGlyph.nextElementSibling.dataset.id
+                        });
                         return;
                     } else {
                         break;
                     };
             };
         };
+
+        // Click control events
+        document.getElementById('modalPNGDownload').addEventListener("click", function (){
+            window.dataLayer.push({
+                event: 'analyticsEvent',
+                eventCategory: 'Download',
+                eventAction: 'PNG',
+                eventLabel: selectedGlyph.dataset.id
+            });
+        });
+        document.getElementById('modalSVGDownload').addEventListener("click", function (){
+            window.dataLayer.push({
+                event: 'analyticsEvent',
+                eventCategory: 'Download',
+                eventAction: 'SVG',
+                eventLabel: selectedGlyph.dataset.id
+            });
+        });
     }
+
+    /* 
+    Push downloadAll event to analyticsEvent in gtag */
+    document.getElementById('downloadAll').addEventListener("click", function (){
+        window.dataLayer.push({
+            event: 'analyticsEvent',
+            eventCategory: 'Download',
+            eventAction: '',
+            eventLabel: 'set'
+        });
+    });
 });

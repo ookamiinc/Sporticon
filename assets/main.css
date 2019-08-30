@@ -3406,7 +3406,527 @@ code, .code { font-family: Consolas, monaco, monospace; }
  Add custom styles here.
 
 */
+.svg-9-man_volleyball, .svg-american_football, .svg-amputee_football, .svg-australian_football, .svg-badminton, .svg-ball_badminton, .svg-bandy, .svg-baseball, .svg-basketball, .svg-basque_pelota, .svg-beach_basketball, .svg-beach_soccer, .svg-beach_tchoukball, .svg-beach_tennis, .svg-beach_ultimate, .svg-beach_volleyball, .svg-biribol, .svg-boat_race, .svg-boccia, .svg-bossaball, .svg-bound_tennis, .svg-bowling, .svg-broomball, .svg-canadian_football, .svg-canoe_polo, .svg-climbing, .svg-combat, .svg-crossminton, .svg-curling, .svg-cycle_polo, .svg-cycling, .svg-dance, .svg-ecua_volley, .svg-esci_tennis, .svg-extreme_sports, .svg-fencing, .svg-figure_skating, .svg-fistball, .svg-flag_football, .svg-floor_ball, .svg-floor_hockey, .svg-footbag_net, .svg-footvolley, .svg-free_tennis, .svg-frontenis, .svg-futsal, .svg-gaelic_football, .svg-goalball, .svg-golf, .svg-gymnastics, .svg-handball, .svg-hardball_squash, .svg-hardcourt_bike_polo, .svg-hockey, .svg-hooverball, .svg-horse_racing, .svg-hurling, .svg-ice_hockey, .svg-indiaca, .svg-inline_hockey, .svg-jai_alai, .svg-judo, .svg-kendo, .svg-kin-ball, .svg-korfball, .svg-lacross, .svg-large_ball, .svg-marine_sports, .svg-mini_basketball, .svg-miniten, .svg-mothers_volleyball, .svg-motorsports, .svg-netball, .svg-oztag, .svg-padel, .svg-paleta_fronton, .svg-pelota_mixteca, .svg-peteca, .svg-pickleball, .svg-platform_tennis, .svg-polo, .svg-powerchair_football, .svg-quad_hockey, .svg-rackets, .svg-racquetball, .svg-radball, .svg-real_tennis, .svg-ringball, .svg-ringette, .svg-roll_ball, .svg-rowing, .svg-rugby, .svg-sailing, .svg-sepak_takraw, .svg-shinty, .svg-ski_and_snowboard, .svg-sledge_hockey, .svg-snow_volleyball, .svg-soccer, .svg-soft_tennis, .svg-softball, .svg-speed_ball, .svg-sports_business, .svg-squash, .svg-squash_tennis, .svg-sticke_tennis, .svg-sumo, .svg-swimming, .svg-table_tennis, .svg-tag_rugby, .svg-taspony, .svg-tchoukball, .svg-tennis, .svg-throwball, .svg-touch_football, .svg-touch_rugby, .svg-track_and_field, .svg-triathlon, .svg-ultimate, .svg-volleyball, .svg-wall_handball, .svg-wallyball, .svg-water_basketball, .svg-water_polo, .svg-weightlifting, .svg-wheelchair_basketball, .svg-wheelchair_handball, .svg-wheelchair_rugby, .svg-wrestling { background: url("https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/build/css/svg/sprite.css.svg?sanitize=true") no-repeat; }
+
+.svg-9-man_volleyball { background-position: 0 0; }
+
+.svg-american_football { background-position: 0.78125% 0; }
+
+.svg-amputee_football { background-position: 1.5625% 0; }
+
+.svg-australian_football { background-position: 2.34375% 0; }
+
+.svg-badminton { background-position: 3.125% 0; }
+
+.svg-ball_badminton { background-position: 3.90625% 0; }
+
+.svg-bandy { background-position: 4.6875% 0; }
+
+.svg-baseball { background-position: 5.46875% 0; }
+
+.svg-basketball { background-position: 6.25% 0; }
+
+.svg-basque_pelota { background-position: 7.03125% 0; }
+
+.svg-beach_basketball { background-position: 7.8125% 0; }
+
+.svg-beach_soccer { background-position: 8.59375% 0; }
+
+.svg-beach_tchoukball { background-position: 9.375% 0; }
+
+.svg-beach_tennis { background-position: 10.15625% 0; }
+
+.svg-beach_ultimate { background-position: 10.9375% 0; }
+
+.svg-beach_volleyball { background-position: 11.71875% 0; }
+
+.svg-biribol { background-position: 12.5% 0; }
+
+.svg-boat_race { background-position: 13.28125% 0; }
+
+.svg-boccia { background-position: 14.0625% 0; }
+
+.svg-bossaball { background-position: 14.84375% 0; }
+
+.svg-bound_tennis { background-position: 15.625% 0; }
+
+.svg-bowling { background-position: 16.40625% 0; }
+
+.svg-broomball { background-position: 17.1875% 0; }
+
+.svg-canadian_football { background-position: 17.96875% 0; }
+
+.svg-canoe_polo { background-position: 18.75% 0; }
+
+.svg-climbing { background-position: 19.53125% 0; }
+
+.svg-combat { background-position: 20.3125% 0; }
+
+.svg-crossminton { background-position: 21.09375% 0; }
+
+.svg-curling { background-position: 21.875% 0; }
+
+.svg-cycle_polo { background-position: 22.65625% 0; }
+
+.svg-cycling { background-position: 23.4375% 0; }
+
+.svg-dance { background-position: 24.21875% 0; }
+
+.svg-ecua_volley { background-position: 25% 0; }
+
+.svg-esci_tennis { background-position: 25.78125% 0; }
+
+.svg-extreme_sports { background-position: 26.5625% 0; }
+
+.svg-fencing { background-position: 27.34375% 0; }
+
+.svg-figure_skating { background-position: 28.125% 0; }
+
+.svg-fistball { background-position: 28.90625% 0; }
+
+.svg-flag_football { background-position: 29.6875% 0; }
+
+.svg-floor_ball { background-position: 30.46875% 0; }
+
+.svg-floor_hockey { background-position: 31.25% 0; }
+
+.svg-footbag_net { background-position: 32.03125% 0; }
+
+.svg-footvolley { background-position: 32.8125% 0; }
+
+.svg-free_tennis { background-position: 33.59375% 0; }
+
+.svg-frontenis { background-position: 34.375% 0; }
+
+.svg-futsal { background-position: 35.15625% 0; }
+
+.svg-gaelic_football { background-position: 35.9375% 0; }
+
+.svg-goalball { background-position: 36.71875% 0; }
+
+.svg-golf { background-position: 37.5% 0; }
+
+.svg-gymnastics { background-position: 38.28125% 0; }
+
+.svg-handball { background-position: 39.0625% 0; }
+
+.svg-hardball_squash { background-position: 39.84375% 0; }
+
+.svg-hardcourt_bike_polo { background-position: 40.625% 0; }
+
+.svg-hockey { background-position: 41.40625% 0; }
+
+.svg-hooverball { background-position: 42.1875% 0; }
+
+.svg-horse_racing { background-position: 42.96875% 0; }
+
+.svg-hurling { background-position: 43.75% 0; }
+
+.svg-ice_hockey { background-position: 44.53125% 0; }
+
+.svg-indiaca { background-position: 45.3125% 0; }
+
+.svg-inline_hockey { background-position: 46.09375% 0; }
+
+.svg-jai_alai { background-position: 46.875% 0; }
+
+.svg-judo { background-position: 47.65625% 0; }
+
+.svg-kendo { background-position: 48.4375% 0; }
+
+.svg-kin-ball { background-position: 49.21875% 0; }
+
+.svg-korfball { background-position: 50% 0; }
+
+.svg-lacross { background-position: 50.78125% 0; }
+
+.svg-large_ball { background-position: 51.5625% 0; }
+
+.svg-marine_sports { background-position: 52.34375% 0; }
+
+.svg-mini_basketball { background-position: 53.125% 0; }
+
+.svg-miniten { background-position: 53.90625% 0; }
+
+.svg-mothers_volleyball { background-position: 54.6875% 0; }
+
+.svg-motorsports { background-position: 55.46875% 0; }
+
+.svg-netball { background-position: 56.25% 0; }
+
+.svg-oztag { background-position: 57.03125% 0; }
+
+.svg-padel { background-position: 57.8125% 0; }
+
+.svg-paleta_fronton { background-position: 58.59375% 0; }
+
+.svg-pelota_mixteca { background-position: 59.375% 0; }
+
+.svg-peteca { background-position: 60.15625% 0; }
+
+.svg-pickleball { background-position: 60.9375% 0; }
+
+.svg-platform_tennis { background-position: 61.71875% 0; }
+
+.svg-polo { background-position: 62.5% 0; }
+
+.svg-powerchair_football { background-position: 63.28125% 0; }
+
+.svg-quad_hockey { background-position: 64.0625% 0; }
+
+.svg-rackets { background-position: 64.84375% 0; }
+
+.svg-racquetball { background-position: 65.625% 0; }
+
+.svg-radball { background-position: 66.40625% 0; }
+
+.svg-real_tennis { background-position: 67.1875% 0; }
+
+.svg-ringball { background-position: 67.96875% 0; }
+
+.svg-ringette { background-position: 68.75% 0; }
+
+.svg-roll_ball { background-position: 69.53125% 0; }
+
+.svg-rowing { background-position: 70.3125% 0; }
+
+.svg-rugby { background-position: 71.09375% 0; }
+
+.svg-sailing { background-position: 71.875% 0; }
+
+.svg-sepak_takraw { background-position: 72.65625% 0; }
+
+.svg-shinty { background-position: 73.4375% 0; }
+
+.svg-ski_and_snowboard { background-position: 74.21875% 0; }
+
+.svg-sledge_hockey { background-position: 75% 0; }
+
+.svg-snow_volleyball { background-position: 75.78125% 0; }
+
+.svg-soccer { background-position: 76.5625% 0; }
+
+.svg-soft_tennis { background-position: 77.34375% 0; }
+
+.svg-softball { background-position: 78.125% 0; }
+
+.svg-speed_ball { background-position: 78.90625% 0; }
+
+.svg-sports_business { background-position: 79.6875% 0; }
+
+.svg-squash { background-position: 80.46875% 0; }
+
+.svg-squash_tennis { background-position: 81.25% 0; }
+
+.svg-sticke_tennis { background-position: 82.03125% 0; }
+
+.svg-sumo { background-position: 82.8125% 0; }
+
+.svg-swimming { background-position: 83.59375% 0; }
+
+.svg-table_tennis { background-position: 84.375% 0; }
+
+.svg-tag_rugby { background-position: 85.15625% 0; }
+
+.svg-taspony { background-position: 85.9375% 0; }
+
+.svg-tchoukball { background-position: 86.71875% 0; }
+
+.svg-tennis { background-position: 87.5% 0; }
+
+.svg-throwball { background-position: 88.28125% 0; }
+
+.svg-touch_football { background-position: 89.0625% 0; }
+
+.svg-touch_rugby { background-position: 89.84375% 0; }
+
+.svg-track_and_field { background-position: 90.625% 0; }
+
+.svg-triathlon { background-position: 91.40625% 0; }
+
+.svg-ultimate { background-position: 92.1875% 0; }
+
+.svg-volleyball { background-position: 92.96875% 0; }
+
+.svg-wall_handball { background-position: 93.75% 0; }
+
+.svg-wallyball { background-position: 94.53125% 0; }
+
+.svg-water_basketball { background-position: 95.3125% 0; }
+
+.svg-water_polo { background-position: 96.09375% 0; }
+
+.svg-weightlifting { background-position: 96.875% 0; }
+
+.svg-wheelchair_basketball { background-position: 97.65625% 0; }
+
+.svg-wheelchair_handball { background-position: 98.4375% 0; }
+
+.svg-wheelchair_rugby { background-position: 99.21875% 0; }
+
+.svg-wrestling { background-position: 100% 0; }
+
 html { font-family: 'Inter', 'Kinto Sans', system-ui, -apple-system, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic UI', 'Segoe UI', 'Meiryo', sans-serif; }
+
+.svg-9-man_volleyball, .svg-american_football, .svg-amputee_football, .svg-australian_football, .svg-badminton, .svg-ball_badminton, .svg-bandy, .svg-baseball, .svg-basketball, .svg-basque_pelota, .svg-beach_basketball, .svg-beach_soccer, .svg-beach_tchoukball, .svg-beach_tennis, .svg-beach_ultimate, .svg-beach_volleyball, .svg-biribol, .svg-boat_race, .svg-boccia, .svg-bossaball, .svg-bound_tennis, .svg-bowling, .svg-broomball, .svg-canadian_football, .svg-canoe_polo, .svg-climbing, .svg-combat, .svg-crossminton, .svg-curling, .svg-cycle_polo, .svg-cycling, .svg-dance, .svg-ecua_volley, .svg-esci_tennis, .svg-extreme_sports, .svg-fencing, .svg-figure_skating, .svg-fistball, .svg-flag_football, .svg-floor_ball, .svg-floor_hockey, .svg-footbag_net, .svg-footvolley, .svg-free_tennis, .svg-frontenis, .svg-futsal, .svg-gaelic_football, .svg-goalball, .svg-golf, .svg-gymnastics, .svg-handball, .svg-hardball_squash, .svg-hardcourt_bike_polo, .svg-hockey, .svg-hooverball, .svg-horse_racing, .svg-hurling, .svg-ice_hockey, .svg-indiaca, .svg-inline_hockey, .svg-jai_alai, .svg-judo, .svg-kendo, .svg-kin-ball, .svg-korfball, .svg-lacross, .svg-large_ball, .svg-marine_sports, .svg-mini_basketball, .svg-miniten, .svg-mothers_volleyball, .svg-motorsports, .svg-netball, .svg-oztag, .svg-padel, .svg-paleta_fronton, .svg-pelota_mixteca, .svg-peteca, .svg-pickleball, .svg-platform_tennis, .svg-polo, .svg-powerchair_football, .svg-quad_hockey, .svg-rackets, .svg-racquetball, .svg-radball, .svg-real_tennis, .svg-ringball, .svg-ringette, .svg-roll_ball, .svg-rowing, .svg-rugby, .svg-sailing, .svg-sepak_takraw, .svg-shinty, .svg-ski_and_snowboard, .svg-sledge_hockey, .svg-snow_volleyball, .svg-soccer, .svg-soft_tennis, .svg-softball, .svg-speed_ball, .svg-sports_business, .svg-squash, .svg-squash_tennis, .svg-sticke_tennis, .svg-sumo, .svg-swimming, .svg-table_tennis, .svg-tag_rugby, .svg-taspony, .svg-tchoukball, .svg-tennis, .svg-throwball, .svg-touch_football, .svg-touch_rugby, .svg-track_and_field, .svg-triathlon, .svg-ultimate, .svg-volleyball, .svg-wall_handball, .svg-wallyball, .svg-water_basketball, .svg-water_polo, .svg-weightlifting, .svg-wheelchair_basketball, .svg-wheelchair_handball, .svg-wheelchair_rugby, .svg-wrestling { background: url("https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/build/css/svg/sprite.css.svg?sanitize=true") no-repeat; }
+
+.svg-9-man_volleyball { background-position: 0 0; }
+
+.svg-american_football { background-position: 0.78125% 0; }
+
+.svg-amputee_football { background-position: 1.5625% 0; }
+
+.svg-australian_football { background-position: 2.34375% 0; }
+
+.svg-badminton { background-position: 3.125% 0; }
+
+.svg-ball_badminton { background-position: 3.90625% 0; }
+
+.svg-bandy { background-position: 4.6875% 0; }
+
+.svg-baseball { background-position: 5.46875% 0; }
+
+.svg-basketball { background-position: 6.25% 0; }
+
+.svg-basque_pelota { background-position: 7.03125% 0; }
+
+.svg-beach_basketball { background-position: 7.8125% 0; }
+
+.svg-beach_soccer { background-position: 8.59375% 0; }
+
+.svg-beach_tchoukball { background-position: 9.375% 0; }
+
+.svg-beach_tennis { background-position: 10.15625% 0; }
+
+.svg-beach_ultimate { background-position: 10.9375% 0; }
+
+.svg-beach_volleyball { background-position: 11.71875% 0; }
+
+.svg-biribol { background-position: 12.5% 0; }
+
+.svg-boat_race { background-position: 13.28125% 0; }
+
+.svg-boccia { background-position: 14.0625% 0; }
+
+.svg-bossaball { background-position: 14.84375% 0; }
+
+.svg-bound_tennis { background-position: 15.625% 0; }
+
+.svg-bowling { background-position: 16.40625% 0; }
+
+.svg-broomball { background-position: 17.1875% 0; }
+
+.svg-canadian_football { background-position: 17.96875% 0; }
+
+.svg-canoe_polo { background-position: 18.75% 0; }
+
+.svg-climbing { background-position: 19.53125% 0; }
+
+.svg-combat { background-position: 20.3125% 0; }
+
+.svg-crossminton { background-position: 21.09375% 0; }
+
+.svg-curling { background-position: 21.875% 0; }
+
+.svg-cycle_polo { background-position: 22.65625% 0; }
+
+.svg-cycling { background-position: 23.4375% 0; }
+
+.svg-dance { background-position: 24.21875% 0; }
+
+.svg-ecua_volley { background-position: 25% 0; }
+
+.svg-esci_tennis { background-position: 25.78125% 0; }
+
+.svg-extreme_sports { background-position: 26.5625% 0; }
+
+.svg-fencing { background-position: 27.34375% 0; }
+
+.svg-figure_skating { background-position: 28.125% 0; }
+
+.svg-fistball { background-position: 28.90625% 0; }
+
+.svg-flag_football { background-position: 29.6875% 0; }
+
+.svg-floor_ball { background-position: 30.46875% 0; }
+
+.svg-floor_hockey { background-position: 31.25% 0; }
+
+.svg-footbag_net { background-position: 32.03125% 0; }
+
+.svg-footvolley { background-position: 32.8125% 0; }
+
+.svg-free_tennis { background-position: 33.59375% 0; }
+
+.svg-frontenis { background-position: 34.375% 0; }
+
+.svg-futsal { background-position: 35.15625% 0; }
+
+.svg-gaelic_football { background-position: 35.9375% 0; }
+
+.svg-goalball { background-position: 36.71875% 0; }
+
+.svg-golf { background-position: 37.5% 0; }
+
+.svg-gymnastics { background-position: 38.28125% 0; }
+
+.svg-handball { background-position: 39.0625% 0; }
+
+.svg-hardball_squash { background-position: 39.84375% 0; }
+
+.svg-hardcourt_bike_polo { background-position: 40.625% 0; }
+
+.svg-hockey { background-position: 41.40625% 0; }
+
+.svg-hooverball { background-position: 42.1875% 0; }
+
+.svg-horse_racing { background-position: 42.96875% 0; }
+
+.svg-hurling { background-position: 43.75% 0; }
+
+.svg-ice_hockey { background-position: 44.53125% 0; }
+
+.svg-indiaca { background-position: 45.3125% 0; }
+
+.svg-inline_hockey { background-position: 46.09375% 0; }
+
+.svg-jai_alai { background-position: 46.875% 0; }
+
+.svg-judo { background-position: 47.65625% 0; }
+
+.svg-kendo { background-position: 48.4375% 0; }
+
+.svg-kin-ball { background-position: 49.21875% 0; }
+
+.svg-korfball { background-position: 50% 0; }
+
+.svg-lacross { background-position: 50.78125% 0; }
+
+.svg-large_ball { background-position: 51.5625% 0; }
+
+.svg-marine_sports { background-position: 52.34375% 0; }
+
+.svg-mini_basketball { background-position: 53.125% 0; }
+
+.svg-miniten { background-position: 53.90625% 0; }
+
+.svg-mothers_volleyball { background-position: 54.6875% 0; }
+
+.svg-motorsports { background-position: 55.46875% 0; }
+
+.svg-netball { background-position: 56.25% 0; }
+
+.svg-oztag { background-position: 57.03125% 0; }
+
+.svg-padel { background-position: 57.8125% 0; }
+
+.svg-paleta_fronton { background-position: 58.59375% 0; }
+
+.svg-pelota_mixteca { background-position: 59.375% 0; }
+
+.svg-peteca { background-position: 60.15625% 0; }
+
+.svg-pickleball { background-position: 60.9375% 0; }
+
+.svg-platform_tennis { background-position: 61.71875% 0; }
+
+.svg-polo { background-position: 62.5% 0; }
+
+.svg-powerchair_football { background-position: 63.28125% 0; }
+
+.svg-quad_hockey { background-position: 64.0625% 0; }
+
+.svg-rackets { background-position: 64.84375% 0; }
+
+.svg-racquetball { background-position: 65.625% 0; }
+
+.svg-radball { background-position: 66.40625% 0; }
+
+.svg-real_tennis { background-position: 67.1875% 0; }
+
+.svg-ringball { background-position: 67.96875% 0; }
+
+.svg-ringette { background-position: 68.75% 0; }
+
+.svg-roll_ball { background-position: 69.53125% 0; }
+
+.svg-rowing { background-position: 70.3125% 0; }
+
+.svg-rugby { background-position: 71.09375% 0; }
+
+.svg-sailing { background-position: 71.875% 0; }
+
+.svg-sepak_takraw { background-position: 72.65625% 0; }
+
+.svg-shinty { background-position: 73.4375% 0; }
+
+.svg-ski_and_snowboard { background-position: 74.21875% 0; }
+
+.svg-sledge_hockey { background-position: 75% 0; }
+
+.svg-snow_volleyball { background-position: 75.78125% 0; }
+
+.svg-soccer { background-position: 76.5625% 0; }
+
+.svg-soft_tennis { background-position: 77.34375% 0; }
+
+.svg-softball { background-position: 78.125% 0; }
+
+.svg-speed_ball { background-position: 78.90625% 0; }
+
+.svg-sports_business { background-position: 79.6875% 0; }
+
+.svg-squash { background-position: 80.46875% 0; }
+
+.svg-squash_tennis { background-position: 81.25% 0; }
+
+.svg-sticke_tennis { background-position: 82.03125% 0; }
+
+.svg-sumo { background-position: 82.8125% 0; }
+
+.svg-swimming { background-position: 83.59375% 0; }
+
+.svg-table_tennis { background-position: 84.375% 0; }
+
+.svg-tag_rugby { background-position: 85.15625% 0; }
+
+.svg-taspony { background-position: 85.9375% 0; }
+
+.svg-tchoukball { background-position: 86.71875% 0; }
+
+.svg-tennis { background-position: 87.5% 0; }
+
+.svg-throwball { background-position: 88.28125% 0; }
+
+.svg-touch_football { background-position: 89.0625% 0; }
+
+.svg-touch_rugby { background-position: 89.84375% 0; }
+
+.svg-track_and_field { background-position: 90.625% 0; }
+
+.svg-triathlon { background-position: 91.40625% 0; }
+
+.svg-ultimate { background-position: 92.1875% 0; }
+
+.svg-volleyball { background-position: 92.96875% 0; }
+
+.svg-wall_handball { background-position: 93.75% 0; }
+
+.svg-wallyball { background-position: 94.53125% 0; }
+
+.svg-water_basketball { background-position: 95.3125% 0; }
+
+.svg-water_polo { background-position: 96.09375% 0; }
+
+.svg-weightlifting { background-position: 96.875% 0; }
+
+.svg-wheelchair_basketball { background-position: 97.65625% 0; }
+
+.svg-wheelchair_handball { background-position: 98.4375% 0; }
+
+.svg-wheelchair_rugby { background-position: 99.21875% 0; }
+
+.svg-wrestling { background-position: 100% 0; }
 
 * { color: #000; -webkit-font-smoothing: antialiased; }
 
@@ -3451,4 +3971,4 @@ p a.link-secondary { color: #ff881f; border-bottom: 2px solid #ffd9b8; }
 .iconTable .eachIcon a:hover, .iconTable .eachIcon a:active, .iconTable .eachIcon .iconObject:hover, .iconTable .eachIcon .iconObject:active { opacity: 1; background: rgba(255, 57, 95, 0.1); }
 .iconTable .eachIcon .label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-i { width: 100%; background: no-repeat center; }
+i { width: 100%; background-repeat: no-repeat center; background-size: calc(129 * 100%) 100% !important; }
