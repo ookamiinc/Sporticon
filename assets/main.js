@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
     function setGlyphInformation(selectedGlyph){
-        document.getElementById('modalGlyph').className = "svg-" + selectedGlyph.dataset.sportname;
-        document.getElementById('modalGlyph').classList.add("svg-" + selectedGlyph.dataset.sportname); 
+        document.getElementById('modalGlyph').className = "svg-" + selectedGlyph.dataset.id;
+        document.getElementById('modalGlyph').classList.add("svg-" + selectedGlyph.dataset.id); 
         document.getElementById('modalTitle').innerHTML = selectedGlyph.dataset.name;
         document.getElementById('modalDescription').innerHTML = selectedGlyph.dataset.description;
         document.getElementById('modalSVGDownload').setAttribute("href", selectedGlyph.dataset.svg);
