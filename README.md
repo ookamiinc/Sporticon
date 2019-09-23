@@ -14,77 +14,98 @@ Player! Sporticon is a simple, delightfully crafted set of symbols made to repre
 Before proceeding, you should [install Homebrew](http://brew.sh/).
 
 1.  Fork the Sporticon repository on Github to your own account then clone it locally.
-    For [ookami](https://github.com/ookamiinc) members, please clone this repository directly. 
+    For [ookami](https://github.com/ookamiinc) members, please clone this repository directly: 
     ```
     $ git clone git@github.com:ookamiinc/sporticon.git Sporticon
     ```
 
 ### Design
 
-Sporticon are originally all created in Adobe Illustrator.
-All design files are stored inside of `src/design` with:
-- Original Adobe Illustrator files in `src/design/ai`: Including all original paths, strokes, guides and layers.
-- Flat Adobe Illustrator files in `src/design/ai_flat`: Including all flattened vector using the toolkit.  
-- SVG Adobe Illustrator files in `src/design/ai_flat`: Including all SVG files made from the previous flattend version. This makes it sure that all designs are correctly exported as intended, as this file format will be used to build many other formats for `src/production`.
+Sporticon are originally all created in Adobe Illustrator with defined guides to help create consistent icons across the icon family. There are 2 types of designs included in here with Source containing the original design files, and production containing automatically exported files in many formats from Source for distribution and use in many environement.
 
-***
+About making a new icon or modifiying an exsisting one, please checkout the [toolkit]().
 
-All other formats for many other mediums (Vector, Raster, Font...) are stored inside of `src/production`, a directory automatically built by a CI. 
+#### → Source design files
+All design files are in `src/design` as followed:
+- **Original Illustrator files in `src/design/ai`**: including all path data, strokes, guides and layers. This will be the designer's main workspace when working on the icon.
+- **Flat Illustrator files in `src/design/ai_flat`**: including all flattened vector paths, exported from `src/design/ai` using Illustrator Actions provided in the design toolkit.
+- **SVG files exported from Illustrator in `src/design/svg`**: including all flattened vector paths, exported from `src/design/ai_flat`. This file format will be then used to build many other formats (in production `src/production`).
+
+#### → Production design files
+All productions files are by default black fill and scaled to 1000px × 1000px. In `src/production` as followed:
+
+- **SVG**: Cleaned vector format. Suitable for use in design software.
+- **SVG Compressed**: Cleaned, lighter and simplified vector format. Suitable for use in Browser view / Web.
+- **PNG**: Raster format.
+- **PDF**: Vector format.
+- **Font**: Vector icon fonts including EOT, TTF, WOFF, WOFF2 with its CSS defined for use in Web.
+- **CSS Sprite**: SVG Sprite with CSS & SCSS defined for use in Web.
+
+
+Production design files are automatically built with CircleCI upon push towards `origin/develop` with a series of [tasks](), so there is no need to manually export design files to production.
+
 To test if the designs files are being built correctly for production, a build command is locally available for testing.
 
-`Build` consists of building Adobe Illustrator SVG files from `src/design/svg` to a new directory called `src/build` with a set of formats including:
-- SVG: Scaled to 1000px * 1000px.
-- SVG Compressed: Lighter and simplified SVG from the previous. (Suitable for Web use, not recommended for editing in a design software).
-- PNG: PNG raster 1000px * 1000px.
-- PDF: PDF vector 1000px * 1000px.
-- Font: Vector icon fonts including EOT, TTF, WOFF, WOFF2 with CSS.
-- CSS Sprite: SVG Sprite with CSS & SCSS.
-
-Note: `Build` is **only** used to preview what production `src/production` will look like when pushed to origin. A CI is automatically deployed to create `src/production` on the server when merging to `develop` branch, so it is not necessary to `build` sporticon each time on commit.
-
-#### Installation for Build
-1.  Install [nvm](https://github.com/nvm-sh/nvm) & [Node](https://nodejs.org/en/) 10.15.0.
+##### Installation
+1.  Install [nvm](https://github.com/nvm-sh/nvm) & [Node](https://nodejs.org/en/) 10.15.0:
     ```
     $ brew install nvm
     $ nvm install 10.15.0
     ```
-2.  Install [Gulp](https://gulpjs.com/) CLI.
+2.  Install [Gulp](https://gulpjs.com/) CLI:
     ```
     $ npm install -g gulp-cli
     ```
-3.  Install [packages](https://github.com/ookamiinc/Sporticon/blob/master/package.json). 
+3.  Install [packages](https://github.com/ookamiinc/Sporticon/blob/master/package.json):
     ```
     $ npm install
     ```
 
-#### Building Sporticon
+##### Build locally
 1.  Build sporticon using gulp with the `build` task.
     ```
     $ gulp build
     ```
-    Find the built files in `src/build`.
+	Find the built files in `src/build`.
+    
+Note: This command should be used to test and preview what production (`src/production`) will look like upon push. A CI is automatically deployed to run tasks and create Production files when pushing to `origin/develop` branch, so it is not necessary to run the command above upon commit or design changes as `src/build` is ignored. 
 
 ### Website
 
 The website uses [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github.com/)
 
 ##### Installation
+1.  Install and setup [rbenv](https://github.com/rbenv/rbenv#installation):
+2.  Install [Ruby](https://www.ruby-lang.org/en/) (2.5.1 or higher) with rbenv.
+	```
+    $ rbenv install 2.5.1
+    ```
+   
+3.  Install [Bundler 2](https://bundler.io/guides/bundler_2_upgrade.html):
+    ```
+    $ gem install bundler
+    ```
 
-##### Requirements: 
-- Ruby (2.5.1 or higher)
-- Bundler (2.0 or higher)
-```
-cd docs
-```
-```
-bundle install
-```
-```
-bundle exec jekyll build
-```
-```
-bundle exec jekyll serve --host=0.0.0.0
-```
+##### Build locally
+1.  Move working directory to website (only once):
+    ```
+    cd docs
+    ```
+2. 	Install dependencies (only once):
+    ```
+    bundle install
+    ```
+3.	Build website:
+    ```
+    bundle exec jekyll build
+    ```
+    Find the built files in `/docs/_site`.
+   
+4.	Optional: Serve website (useful when previewing changes live via local server):
+	``` 
+	bundle exec jekyll serve --host=0.0.0.0
+    ```
+
 
 ## Acknowledgement 
 
