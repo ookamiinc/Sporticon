@@ -3,7 +3,7 @@ jobs:
   build-production:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.15.0
+      - image: circleci/node:10.16.3
     environment:
       - NODE_ENV: development
     steps:
@@ -40,7 +40,7 @@ workflows:
       - build-production: 
           filters:
             branches:
-              only: develop
+              only: master
       - deploy-site:
           filters:
             branches:
