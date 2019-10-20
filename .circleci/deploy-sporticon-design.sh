@@ -3,11 +3,11 @@ git config user.email "$USER_EMAIL"
 
 git checkout master
 
-rm -rf src/production 
-mv src/build src/production 
+rm -rf src/export
+mv src/build src/export
 
-git add src/production
-git add docs/_sass/sprite.scss
+git add src/export
+git add website/_sass/sprite.scss
 git commit -m "Sporticon build from $(git log -1 --format=%h) [ci skip]"
 git push origin master
 

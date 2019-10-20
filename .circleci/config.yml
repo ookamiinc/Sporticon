@@ -15,7 +15,7 @@ jobs:
       - run: gulp update-css
       - deploy:
           name: Deploy Production
-          command: bash .circleci/deploy-production.sh
+          command: bash .circleci/deploy-sporticon-design.sh
   deploy-site:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
