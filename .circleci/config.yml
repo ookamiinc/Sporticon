@@ -15,7 +15,7 @@ jobs:
       - run: gulp update-css
       - deploy:
           name: Deploy Production
-          command: bash .circleci/deploy-production.sh
+          command: bash .circleci/deploy-sporticon-design.sh
   deploy-site:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
@@ -28,11 +28,11 @@ jobs:
           command: |
             sudo gem update --system
             sudo gem install bundler
-      - run: cd docs/ && bundle install
-      - run: cd docs/ && bundle exec jekyll build
+      - run: cd website/ && bundle install
+      - run: cd website/ && bundle exec jekyll build
       - deploy:
           name: Deploy Site to GitHub
-          command: bash .circleci/deploy-gh-pages.sh
+          command: bash .circleci/deploy-website.sh
 workflows:
   version: 2
   build:
