@@ -13,7 +13,8 @@ Player! Sporticon is a simple, delightfully crafted set of symbols made to repre
 **Suggestions & contributions are welcome:** This is an open source project, meaning the original symbol files used to build Sporticon are freely available for remix, re-share and even improve upon. For more information about contributing, proceed to these guides below:
 
 
-- [Sporticon guides](documentation/contributing.md)
+- [Sporticon contribution guides](documentation/contributing.md)
+- [Sporticon design guidelines](documentation/sporticon-design-guidelines.md)
 - [Website guides](website/README.md)
 
 ## Report & Bugs
