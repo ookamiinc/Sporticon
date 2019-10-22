@@ -1,6 +1,6 @@
 # Contributing to Sporticon Design
 ## Understanding the structure
-Sporticon icons are all originally designed in Adobe Illustrator with defined guides to help create consistent icons across the family.Once the design is made, a command tool will help you test and automatically export the design to many accessible formats, saving a lot of time and mistakes.
+Sporticon icons are all originally designed in Adobe Illustrator with defined guides to help create consistent icons across the family. Once the design is made, a command tool will help you test and automatically export the design to many accessible formats, saving a lot of time and mistakes.
 
 The icon themselves are stored in `src/`, including 2 types of directory such as `src/design` containing all original design files, and `src/export` containing all automatically exported design files in many accessible formats, created from `src/design`.
 
@@ -67,8 +67,8 @@ Before starting, please do not forget to [create an issue](https://github.com/oo
     $ git checkout -b new-american-football
     ```
 
-2. Create a new illustrator file in `src/design/ai` with the help of our templates found in `documentation/guides` & `documentation/templates`. Name your new ai file with the sports name you are creating with all lower-case letters and hyphen `-` as space in between. Please do not use an existing name. 
-    
+2. Create a new illustrator file in `src/design/ai` with the help of our templates found in `documentation/guides` & `documentation/templates`. Name your new ai file with the sports name you are creating with all lower-case letters and hyphen `-` as space in between. Please do not use an existing name.
+
     In this example, the file name will be named `american-football.ai`
 
 3. Follow our design guidelines & specifications at [Sporticon design guidelines](sporticon-design-guidelines.md)
@@ -84,7 +84,7 @@ Before starting, please do not forget to [create an issue](https://github.com/oo
    Find the built files in `src/build`.
 
    → ✅ All formats looking good? Go ahead and commit your changes made in `src/design` towards your branch. In this example: `new-american-football` branch. Let's move to the next step in registering the icon in Sporticon.
-   
+
    → ❌ Not the expected results? It's highly possible that the SVG format in `src/design/svg` isn't flattened enough. That vector shape must be in the flattest shape it possibly can.
 
 #### Registering the icon in Sporticon
@@ -126,7 +126,7 @@ With the new sports icon now created, please add the sports icon itself into the
 4. Upon fill, save the changes and commit your changes made in `website/_data/sporticon_definitions.json` towards the same branch you made when creating the new icon.
 
 5. Comment on the pull request as `ready for review`. 👏🏽
-    
+
     A maintainer of the repository will check your pull request, and if it checks all the steps written in here, we will merge your PR. Thank you for contributing ❤️
 
 ### Edit an existing Sporticon (or registration)
@@ -142,7 +142,7 @@ Before starting, please do not forget to [create an issue](https://github.com/oo
 2. Edit existing data. References of files and structures can be found above in [Create a new Sporticon](#create-a-new-sporticon).
 
 3. Push your branch and comment on the pull request as `ready for review`. 👏🏽
-    
+
     A maintainer of the repository will check your pull request, and  if the changes were appropriate. We will then merge your PR. Thank you for contributing ❤️
 
 ### Deleting an icon from Sporticon
