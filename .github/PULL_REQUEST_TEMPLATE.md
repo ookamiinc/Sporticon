@@ -5,8 +5,12 @@ Thanks for creating a Pull Request 😄 ! Before you submit, please read the fol
 
 <!-- Provide a general summary of the changes in the title above -->
 
+## Reference Issue
+<!-- Paste the Issue link below -->
+
 ## Preflight Checklist
 <!-- Remove items that do not apply. For completed items, change [ ] to [x]. -->
+- [ ] Sporticon data registry
 - Builds Successfully
   - [ ] Sporticon Build
   - [ ] Website Build
