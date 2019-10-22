@@ -8,7 +8,7 @@
     ```
     After cloning, change directory to the repository folder. In this instance:
     ```
-    $ cd sporticon/docs
+    $ cd sporticon/website
     ```
 2.  Install and setup [rbenv](https://github.com/rbenv/rbenv#installation):
 3.  Install [Ruby](https://www.ruby-lang.org/en/) (2.5.1 or higher) with rbenv.
@@ -37,7 +37,7 @@ For all new features and bug fixes please [create an issue](https://github.com/o
 
     $ bundle exec jekyll serve --host=0.0.0.0
     ```
-    Find the built files over `/docs/_site`.
+    Find the built files over `/website/_site`.
 
 Build & deployment to production is done when `develop` merges with `master` on the main repository. Please use `build` as a way to test implementations.
 **This will be a necessary step when submitting a pull request.**
