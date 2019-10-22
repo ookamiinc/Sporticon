@@ -10,6 +10,7 @@ Thanks for creating a Pull Request 😄 ! Before you submit, please read the fol
 
 ## Preflight Checklist
 <!-- Remove items that do not apply. For completed items, change [ ] to [x]. -->
+- [ ] Sporticon data registry
 - Builds Successfully
   - [ ] Sporticon Build
   - [ ] Website Build
