@@ -19,7 +19,7 @@ Player! Sporticon is a simple, delightfully crafted set of symbols made to repre
 
 ## Report & Bugs
 
-Please create a Github issue and provide as much information as possible regarding any problems or a bug, including images or error codes. To make things as uniform as possible please follow the guidelines set out in the Issue templates when making a new issue.
+Please create a Github issue and provide as much information as possible regarding any problems or bugs, including images or error codes. To make things as uniform as possible please follow the guidelines set out in the Issue templates when making a new issue.
 
 ## Acknowledgement
 
