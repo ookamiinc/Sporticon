@@ -79,17 +79,17 @@
 
 ##### Position of stroke
 
-- Generally, please align stroke to center when creating an icon with paths (pen tool).
+- As a general rule, align the stroke to the center when creating an icon with paths (pen tool).
 
-- However, if center alignment of the path causes the icon to go beyond the boundary or if there an unbalance between the path and fill, please use Inside Stroke. （ex: Ball).
+- However, if the center alignment of the path causes the icon to go beyond the boundary, or if there is an unbalance between the path and fill, please use Inside Stroke.（ex: Ball).
 
     <img width="100%" alt="Stroke O" src="https://user-images.githubusercontent.com/3750705/67173949-3f8c2200-f3fb-11e9-94de-0d5e9885905b.png" >
 
 
 ## Human form icon
 
-- Keep a division between the body and legs
-	- Exception: Wheelchair connects with body
+- Keep the body and legs separated.
+	- Exception for wheelchairs
 
 
 - Align paths to the grids
