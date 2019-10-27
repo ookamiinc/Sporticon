@@ -10,7 +10,7 @@
 
 
 ##### 日本語 (Japanese)
-- [全般](#全般)
+- [基本事項](#基本事項)
 - [人型のアイコン](#人型のアイコン)
 - [ボールのアイコン](#ボールのアイコン)
 - [ツールのアイコン](#ツールのアイコン)
@@ -254,14 +254,14 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 ---
 
-## 全般
+## 基本事項
 
-#### 構造
+#### アイコンの作成ポイント
 
 1. 線
-2. 角
-3. 内側角
-4. 余白
+2. 角丸
+3. 内側の角
+4. マージン
 5. オフセット
 
 <img width="100%" alt="Icon Anatomy 1" src="https://user-images.githubusercontent.com/3750705/67173927-37cc7d80-f3fb-11e9-840f-aae833b549fb.png" >
@@ -270,7 +270,9 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 
 #### レイアウト
-- アートボードは `480x480px`、適切なグリッドを利用
+- 作成するアイコンに沿った適切なテンプレートを使用してください
+	- アートボードのサイズ 
+		- `480x480px` 
 
     <img width="100%" alt="Artboard Template" src="https://user-images.githubusercontent.com/3750705/67173905-30a56f80-f3fb-11e9-87bd-f313f55ee11d.png" >
 
@@ -281,7 +283,7 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
     <img width="48%" alt="Design all icons with motions towards the right X" src="https://user-images.githubusercontent.com/3750705/67173919-356a2380-f3fb-11e9-9fb7-360fdb9fe312.png" >
 
 
-- ボールをツールと一緒に使用する場合は大中小の2種類から使用する
+- ボールとツールを一緒に使用する場合は、ボールのサイズを大・小の2種類の内から使用する
 	- `300px`
 	- `200px`
 
@@ -289,13 +291,13 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 
 #### 角丸
-- 全て8pxの角丸をつける
+- 原則的に全てのパスに8pxの角丸をつけること
 
     <img width="48%" align="left" alt="Corner radiuses are 8px O" src="https://user-images.githubusercontent.com/3750705/67173914-33a06000-f3fb-11e9-9399-4cb0f19e2822.png" >
     <img width="48%" alt="Corner radiuses are 8px X" src="https://user-images.githubusercontent.com/3750705/67173915-3438f680-f3fb-11e9-8f98-0fd49b6eb921.png" >
 
 
-- 以下の場合は除く
+- ※以下の場合は除く
 	- ボールの線
 	- Environmentのマスク
 		- ex) Wave, Sand
@@ -309,26 +311,26 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 #### アイコンとテキストの組み合わせ
 
-- すべてのスポーツアイコンは、すべて並べた時にすべて同じサイズに見えるようにそれぞれ余白を取っています。なのでテキストを併用する場合は、アイコンの位置をすべて真ん中に来るようにしなければなりません。
+- テキストを併用する場合は、アイコンの位置をすべて真ん中に来るようにする
 
     <img width="48%" align="left" alt="Icon with Text O" src="https://user-images.githubusercontent.com/3750705/67173931-38fdaa80-f3fb-11e9-8027-0c380d8f2ba5.png" >
     <img width="48%" alt="Icon with Text X" src="https://user-images.githubusercontent.com/3750705/67173933-39964100-f3fb-11e9-9989-47c89dca60bd.png" >
 
 
-#### 作成するときの線の位置
-- アイコンを作成する過程では、パスをガイドに沿わせるために、線の位置は基本的に真ん中に設定した状態で作成してください
+#### 線の位置
+- 基本的に「真ん中」に設定した状態で作成する
 
-- ただし、線が真ん中になることによってガイドからパスが出てしまう場合や、パスの線と塗りのバランスが崩れるときには、内側を使用してください。（例: ボール)
+- ただし、線が真ん中になることによってガイドからパスが出てしまう場合や、パスの線と塗りのバランスが崩れるときには、内側を使用する（例: ボール)
 
     <img width="100%" alt="Stroke O" src="https://user-images.githubusercontent.com/3750705/67173949-3f8c2200-f3fb-11e9-94de-0d5e9885905b.png" >
 
 ## 人型のアイコン
 
-- 体と足は離す
-	- 車椅子は体と合体する
+- 体と足は離して作成すること
+	- ただし車椅子は、体と合体した状態で作成する
 
 
-- グリッドに沿ってアイコンを作成
+- グリッドに沿ってアイコンを作成すること
 
 - 線
 	- 20px
@@ -358,8 +360,8 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 
 - ボールの中のパス
-	- シンプルなパスを描くときは30px
-	- 複雑なパスを描くときは20px
+	- シンプルなパスを描くとき = 30px
+	- 複雑なパスを描くとき = 20px
 
     <img width="100%" alt="Ball outline stroke" src="https://user-images.githubusercontent.com/3750705/67173906-313e0600-f3fb-11e9-8eb6-db3fdaeeba4c.png" >
 
@@ -375,7 +377,7 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 - ボール
 	- 60px x 60px
-	- 3箇所置ける場所があり、アイコンに合った場所にボールは置く
+	- グリッド内にある3箇所のボールガイドのうち、そのアイコンに合った場所にボールは置くこと
 
 
 - オフセット
@@ -387,21 +389,21 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 
 #### ラケット系
-- 上下のベースラインをガイドに合わせる
+- 上下のベースラインをガイドに合わせて作成すること
 
-- 角度をつける場合
+- 角度
 	- 325°
 
 
-- ボールはいつも左側に置くようにする
+- ボールはいつも左側に置くようにして作成する
 
     <img width="48%" align="left" alt="3 places O" src="https://user-images.githubusercontent.com/3750705/67173900-300cd900-f3fb-11e9-8d98-44de724471f6.png" >
     <img width="48%" alt="3 places X" src="https://user-images.githubusercontent.com/3750705/67173902-30a56f80-f3fb-11e9-99ce-c358cff1ebde.png" >
 
 #### スティック系
-- 上下30pxをガイドから開ける
+- 上下30pxをガイドから開けてください。
 
-- 角度をつける場合
+- 角度
 	- 325°
 
 
@@ -412,9 +414,9 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 #### ビーチスポーツ
 - 砂のパスを付け加える
 
-- ガイドの一番下から10pxスペースを入れる
+- ガイドの一番下から10pxスペースをとる
 
-- から40pxスペースを入れる
+- 下から40pxスペースをとる
 
 - 砂の周りは20pxのオフセットをする
 	- 人型のアイコンの場合、片足オフセットを無視することができる
@@ -446,7 +448,7 @@ Only apply symbols in cases where the sport icon alone is difficult to interpret
 
 #### 壁 / ガラス
 
-- 壁を使用するスポーツの場合は、すべて左側にくる
+- 壁を使用するスポーツの場合は、すべて左側にくるようにする
 	- 例) スカッシュ
 
 
