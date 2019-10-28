@@ -25,7 +25,7 @@ jobs:
            command: |
              sudo gem update --system
              sudo gem install bundler
-       - run: cd website/ && bundle install
+       - run: cd website/ && bundle install --jobs=4
        - run: cd website/ && bundle exec jekyll build
 
   build-production-export:
@@ -56,7 +56,7 @@ jobs:
           command: |
             sudo gem update --system
             sudo gem install bundler
-      - run: cd website/ && bundle install
+      - run: cd website/ && bundle install --jobs=4
       - run: cd website/ && bundle exec jekyll build
       - deploy:
           name: Deploy Site to GitHub
