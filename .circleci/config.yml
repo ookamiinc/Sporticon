@@ -10,7 +10,7 @@ jobs:
         - checkout
         - run: sudo npm install -g npm
         - run: sudo npm install -g gulp-cli
-        - run: npm install
+        - run: npm ci
         - run: gulp build
         - run: gulp update-css
   test-site:
@@ -38,7 +38,7 @@ jobs:
       - checkout
       - run: sudo npm install -g npm
       - run: sudo npm install -g gulp-cli
-      - run: npm install
+      - run: npm ci
       - run: gulp build
       - run: gulp update-css
       - deploy:
