@@ -76,6 +76,7 @@ workflows:
       - deploy-site:
           requires:
             - test-site
+            - build-production-export
           filters:
             branches:
               only: master
