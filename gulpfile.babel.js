@@ -114,10 +114,10 @@ gulp.task('createSprite', function(){
 
 gulp.task('moveGlyph', function(){
     return gulp.src('src/build/css/sprite.scss')
-        .pipe(gulp.dest('docs/_sass'));
+        .pipe(gulp.dest('website/_sass'));
 });
 gulp.task('replaceSpriteSrc', function() {
-    return gulp.src('docs/_sass/sprite.scss', { base: './' })
+    return gulp.src('website/_sass/sprite.scss', { base: './' })
       .pipe(replace('svg/sprite.css.svg', srcSpriteSvg))
       .pipe(gulp.dest('.'));
   });
