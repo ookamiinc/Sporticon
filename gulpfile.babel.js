@@ -14,14 +14,20 @@ const projectName = 'Sporticon';
 const buildSVG = 'src/build/svg/*.svg'
 const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/export/css/svg/sprite.css.svg?sanitize=true';
 
+var runTimestamp = Math.round(Date.now()/1000);
 
-gulp.task('cleanProduction', function () {
-    return gulp.src('src/build', {read: false, allowEmpty: true})
-        .pipe(clean());
-});
 ///// Tasks
 // clean
+gulp.task('cleanBuildDir', function () {
+     return gulp.src('src/build', {read: false, allowEmpty: true})
+         .pipe(clean());
+ });
 
+// build
+gulp.task('copySvgToBuild', function () {
+  return gulp.src('src/design/svg/*.svg')
+      .pipe(gulp.dest('src/build/svg'));
+});
 gulp.task('svgScale', function () {
     return gulp.src(buildSVG, { base: './' })
         .pipe(convert({
@@ -96,7 +102,6 @@ gulp.task('createSprite', function(){
         .pipe(gulp.dest('src/build'));
 });
 
-gulp.task('moveGlyph', function(){
     return gulp.src('src/build/css/sprite.scss')
         .pipe(gulp.dest('website/_sass'));
 });
@@ -106,5 +111,5 @@ gulp.task('replaceSpriteSrc', function() {
       .pipe(gulp.dest('.'));
   });
 
-gulp.task('build', gulp.series('cleanProduction', 'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite'));
-gulp.task('update-css', gulp.series('moveGlyph', 'replaceSpriteSrc'));
+gulp.task('build', gulp.series('cleanBuildDir', 'copySvgToBuild' ,'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite'));
+gulp.task('update-css', gulp.series('copySpriteToWebsite', 'replaceSpriteSrc'));
