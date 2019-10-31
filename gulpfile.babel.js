@@ -1,5 +1,6 @@
 'use strict';
 
+///// Import
 import gulp from 'gulp';
 import optimize from 'gulp-image';
 import convert from 'gulp-rsvg';
@@ -8,32 +9,38 @@ import iconfontCss from 'gulp-iconfont-css';
 import svgSprite from 'gulp-svg-sprite';
 import replace from 'gulp-string-replace';
 import clean from 'gulp-clean';
+import run from 'gulp-run-command';
 
 const projectName = 'Sporticon';
-const productionSVG = 'src/build/svg/*.svg'
+const buildSVG = 'src/build/svg/*.svg'
+const xcassetsFormat = ['Sport', 'LargeSport', 'ExtraLargeSport'];
 const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/export/css/svg/sprite.css.svg?sanitize=true';
 
+var runTimestamp = Math.round(Date.now()/1000);
 
-gulp.task('cleanProduction', function () {
-    return gulp.src('src/build', {read: false, allowEmpty: true})
-        .pipe(clean());
+///// Tasks
+// clean
+gulp.task('clean', function () {
+     return gulp.src('src/build', {read: false, allowEmpty: true})
+         .pipe(clean());
+ });
+
+// build
+gulp.task('copySvgToBuild', function () {
+  return gulp.src('src/design/svg/*.svg')
+      .pipe(gulp.dest('src/build/svg'));
 });
-
-/**
- * Optimize SVGs using SVGO.
- * The svgCompression task minimize the SVGs even further for web use.
- */
 gulp.task('svgScale', function () {
-    return gulp.src('src/design/svg/*.svg')
+    return gulp.src(buildSVG, { base: './' })
         .pipe(convert({
             format: 'svg',
             width: 1000,
             height: 1000
         }))
-        .pipe(gulp.dest('src/build/svg'));
+        .pipe(gulp.dest('.'));
 });
 gulp.task('svgOptimization', () => {
-    return gulp.src(productionSVG, { base: './' })
+    return gulp.src(buildSVG, { base: './' })
         .pipe(optimize({
             svgo: ['--disable', 'convertPathData'],
             concurrent: 10
@@ -41,35 +48,24 @@ gulp.task('svgOptimization', () => {
         .pipe(gulp.dest('.'));
 });
 gulp.task('svgCompression', () => {
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(optimize())
         .pipe(gulp.dest('src/build/svg_compressed'));
 });
-/**
- * Export in PNG + PDF format using librsvg
- */
 gulp.task('createPNG', function () {
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(convert())
         .pipe(gulp.dest('src/build/png'));
 });
 gulp.task('createPDF', function () {
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(convert({
             format: 'pdf'
         }))
         .pipe(gulp.dest('src/build/pdf'));
 });
-
-/**
- * Generate font formats from SVG
- * Note quoted from the author: While this plugin may still be useful for fonts generation or old browser support, you should consider using SVG icons directly.
- * More information at https://www.sarasoueidan.com/blog/icon-fonts-to-svg/
- */
-var runTimestamp = Math.round(Date.now()/1000);
-
 gulp.task('createFont', function(){
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
       .pipe(iconfontCss({
         fontName: projectName,
         path: 'node_modules/gulp-iconfont-css/templates/_icons.scss',
@@ -89,12 +85,8 @@ gulp.task('createFont', function(){
       })
       .pipe(gulp.dest('src/build/fonts'));
 });
-
-/**
- * Generate SVG Sprite in CSS format
- */
 gulp.task('createSprite', function(){
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(svgSprite({
             mode: {
                 css: {
@@ -108,11 +100,15 @@ gulp.task('createSprite', function(){
                     bust: false,
                 }
             }
-        })) 
+        }))
         .pipe(gulp.dest('src/build'));
 });
 
-gulp.task('moveGlyph', function(){
+// build-ios
+gulp.task('processForXcassets', run('node sporticon-xcassets-player_id.js'));
+
+// update-css
+gulp.task('copySpriteToWebsite', function(){
     return gulp.src('src/build/css/sprite.scss')
         .pipe(gulp.dest('website/_sass'));
 });
@@ -120,7 +116,7 @@ gulp.task('replaceSpriteSrc', function() {
     return gulp.src('website/_sass/sprite.scss', { base: './' })
       .pipe(replace('svg/sprite.css.svg', srcSpriteSvg))
       .pipe(gulp.dest('.'));
-  });
+});
 
-gulp.task('build', gulp.series('cleanProduction', 'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite'));
-gulp.task('update-css', gulp.series('moveGlyph', 'replaceSpriteSrc'));
+gulp.task('build', gulp.series('clean', 'copySvgToBuild' ,'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite', 'processForXcassets'));
+gulp.task('update-css', gulp.series('copySpriteToWebsite', 'replaceSpriteSrc'));
