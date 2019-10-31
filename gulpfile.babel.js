@@ -11,7 +11,7 @@ import replace from 'gulp-string-replace';
 import clean from 'gulp-clean';
 
 const projectName = 'Sporticon';
-const productionSVG = 'src/build/svg/*.svg'
+const buildSVG = 'src/build/svg/*.svg'
 const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/export/css/svg/sprite.css.svg?sanitize=true';
 
 
@@ -23,16 +23,16 @@ gulp.task('cleanProduction', function () {
 // clean
 
 gulp.task('svgScale', function () {
-    return gulp.src('src/design/svg/*.svg')
+    return gulp.src(buildSVG, { base: './' })
         .pipe(convert({
             format: 'svg',
             width: 1000,
             height: 1000
         }))
-        .pipe(gulp.dest('src/build/svg'));
+        .pipe(gulp.dest('.'));
 });
 gulp.task('svgOptimization', () => {
-    return gulp.src(productionSVG, { base: './' })
+    return gulp.src(buildSVG, { base: './' })
         .pipe(optimize({
             svgo: ['--disable', 'convertPathData'],
             concurrent: 10
@@ -40,24 +40,24 @@ gulp.task('svgOptimization', () => {
         .pipe(gulp.dest('.'));
 });
 gulp.task('svgCompression', () => {
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(optimize())
         .pipe(gulp.dest('src/build/svg_compressed'));
 });
 gulp.task('createPNG', function () {
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(convert())
         .pipe(gulp.dest('src/build/png'));
 });
 gulp.task('createPDF', function () {
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(convert({
             format: 'pdf'
         }))
         .pipe(gulp.dest('src/build/pdf'));
 });
 gulp.task('createFont', function(){
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
       .pipe(iconfontCss({
         fontName: projectName,
         path: 'node_modules/gulp-iconfont-css/templates/_icons.scss',
@@ -78,7 +78,7 @@ gulp.task('createFont', function(){
       .pipe(gulp.dest('src/build/fonts'));
 });
 gulp.task('createSprite', function(){
-    return gulp.src(productionSVG)
+    return gulp.src(buildSVG)
         .pipe(svgSprite({
             mode: {
                 css: {
