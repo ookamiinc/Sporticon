@@ -1,5 +1,6 @@
 'use strict';
 
+///// Import
 import gulp from 'gulp';
 import optimize from 'gulp-image';
 import convert from 'gulp-rsvg';
@@ -18,11 +19,9 @@ gulp.task('cleanProduction', function () {
     return gulp.src('src/build', {read: false, allowEmpty: true})
         .pipe(clean());
 });
+///// Tasks
+// clean
 
-/**
- * Optimize SVGs using SVGO.
- * The svgCompression task minimize the SVGs even further for web use.
- */
 gulp.task('svgScale', function () {
     return gulp.src('src/design/svg/*.svg')
         .pipe(convert({
@@ -45,9 +44,6 @@ gulp.task('svgCompression', () => {
         .pipe(optimize())
         .pipe(gulp.dest('src/build/svg_compressed'));
 });
-/**
- * Export in PNG + PDF format using librsvg
- */
 gulp.task('createPNG', function () {
     return gulp.src(productionSVG)
         .pipe(convert())
@@ -60,14 +56,6 @@ gulp.task('createPDF', function () {
         }))
         .pipe(gulp.dest('src/build/pdf'));
 });
-
-/**
- * Generate font formats from SVG
- * Note quoted from the author: While this plugin may still be useful for fonts generation or old browser support, you should consider using SVG icons directly.
- * More information at https://www.sarasoueidan.com/blog/icon-fonts-to-svg/
- */
-var runTimestamp = Math.round(Date.now()/1000);
-
 gulp.task('createFont', function(){
     return gulp.src(productionSVG)
       .pipe(iconfontCss({
@@ -89,10 +77,6 @@ gulp.task('createFont', function(){
       })
       .pipe(gulp.dest('src/build/fonts'));
 });
-
-/**
- * Generate SVG Sprite in CSS format
- */
 gulp.task('createSprite', function(){
     return gulp.src(productionSVG)
         .pipe(svgSprite({
