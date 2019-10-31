@@ -9,9 +9,11 @@ import iconfontCss from 'gulp-iconfont-css';
 import svgSprite from 'gulp-svg-sprite';
 import replace from 'gulp-string-replace';
 import clean from 'gulp-clean';
+import run from 'gulp-run-command';
 
 const projectName = 'Sporticon';
 const buildSVG = 'src/build/svg/*.svg'
+const xcassetsFormat = ['Sport', 'LargeSport', 'ExtraLargeSport'];
 const srcSpriteSvg = 'https://raw.githubusercontent.com/ookamiinc/Sporticon/master/src/export/css/svg/sprite.css.svg?sanitize=true';
 
 var runTimestamp = Math.round(Date.now()/1000);
@@ -102,6 +104,11 @@ gulp.task('createSprite', function(){
         .pipe(gulp.dest('src/build'));
 });
 
+// build-ios
+gulp.task('processForXcassets', run('node sporticon-xcassets-player_id.js'));
+
+// update-css
+gulp.task('copySpriteToWebsite', function(){
     return gulp.src('src/build/css/sprite.scss')
         .pipe(gulp.dest('website/_sass'));
 });
