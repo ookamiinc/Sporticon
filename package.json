@@ -16,6 +16,8 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
+    "colors": "^1.4.0",
+    "fs-extra": "^8.1.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-iconfont": "^10.0.3",
@@ -23,9 +25,11 @@
     "gulp-if": "^3.0.0",
     "gulp-image": "^5.1.0",
     "gulp-rsvg": "^1.0.2",
+    "gulp-run-command": "0.0.9",
     "gulp-string-replace": "^1.1.2",
     "gulp-svg-sprite": "^1.5.0",
-    "librsvg-prebuilt": "^0.7.10"
+    "librsvg-prebuilt": "^0.7.10",
+    "svg-fill": "^0.2.0"
   },
   "dependencies": {}
 }
