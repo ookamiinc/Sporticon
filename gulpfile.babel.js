@@ -98,7 +98,7 @@ gulp.task('createSprite', function(){
                     bust: false,
                 }
             }
-        })) 
+        }))
         .pipe(gulp.dest('src/build'));
 });
 
@@ -111,5 +111,5 @@ gulp.task('replaceSpriteSrc', function() {
       .pipe(gulp.dest('.'));
   });
 
-gulp.task('build', gulp.series('cleanBuildDir', 'copySvgToBuild' ,'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite'));
+gulp.task('build', gulp.series('clean', 'copySvgToBuild' ,'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite', 'processForXcassets'));
 gulp.task('update-css', gulp.series('copySpriteToWebsite', 'replaceSpriteSrc'));
