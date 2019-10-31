@@ -18,7 +18,7 @@ var runTimestamp = Math.round(Date.now()/1000);
 
 ///// Tasks
 // clean
-gulp.task('cleanBuildDir', function () {
+gulp.task('clean', function () {
      return gulp.src('src/build', {read: false, allowEmpty: true})
          .pipe(clean());
  });
@@ -109,7 +109,7 @@ gulp.task('replaceSpriteSrc', function() {
     return gulp.src('website/_sass/sprite.scss', { base: './' })
       .pipe(replace('svg/sprite.css.svg', srcSpriteSvg))
       .pipe(gulp.dest('.'));
-  });
+});
 
 gulp.task('build', gulp.series('clean', 'copySvgToBuild' ,'svgScale', 'svgOptimization', 'svgCompression', 'createPNG', 'createPDF', 'createFont', 'createSprite', 'processForXcassets'));
 gulp.task('update-css', gulp.series('copySpriteToWebsite', 'replaceSpriteSrc'));
