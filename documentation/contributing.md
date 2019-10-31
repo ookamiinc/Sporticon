@@ -17,9 +17,12 @@ All exported files are by default in black fill and 1000px × 1000px by dimensio
 - **PDF**: Vector format.
 - **Font**: Vector icon fonts including EOT, TTF, WOFF, WOFF2 with its CSS defined for use in Web.
 - **CSS Sprite**: SVG Sprite with CSS & SCSS defined for use in Web.
+- **Images.xcassets***: For ookami dev internal use only.
 
 For Build (= export) & deployment to production is done when `develop` merges with `master` on the main repository. Please use `build` as a way to test implementations.
 **This will be a necessary step when submitting a pull request.**
+
+_* Images.xcassets: Xcode image assets with names and sizes defined specifically for Player.xcworkspace._
 
 ## Design
 
