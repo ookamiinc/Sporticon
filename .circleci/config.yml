@@ -7,7 +7,8 @@ jobs:
     environment:
       - NODE_ENV: development
     steps:
-        - checkout
+        - checkout:
+            method: blobless
         - run: sudo npm install -g npm
         - run: sudo npm install -g gulp-cli
         - run: npm install
@@ -19,7 +20,8 @@ jobs:
          environment:
            BUNDLER_VERSION: 2.0.2
      steps:
-       - checkout
+       - checkout:
+           method: blobless
        - run:
            name: setup bundler
            command: |
@@ -35,7 +37,8 @@ jobs:
     environment:
       - NODE_ENV: development
     steps:
-      - checkout
+      - checkout:
+          method: blobless
       - run: sudo npm install -g npm
       - run: sudo npm install -g gulp-cli
       - run: npm install
@@ -50,7 +53,8 @@ jobs:
         environment:
           BUNDLER_VERSION: 2.0.2
     steps:
-      - checkout
+      - checkout:
+          method: blobless
       - run:
           name: setup bundler
           command: |
